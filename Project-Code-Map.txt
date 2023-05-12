@@ -1,16 +1,18 @@
 Steps necessary to reproduce the project deliverables from the coding perspective
 
+Build
+
 1) acs_build.py
 	* This file pulls in the 2019 Data Profile variables from the American Communities Survey API 
         and does some minimal cleaning. It relies on the acs5_2019_dict dictionary from the proj_globals.py file
         and the dppull function from the ACS_DataProfile_APIPull.py files.
 
-2) Build_Zip_School_Crosswalk.py
+2) Build_Zip_School_Crosswalk.py (depricated under current version - could support additional analysis of school quality)
 	* This file takes in NCES EDGE data, Common Core Data, and TigerLines Zip Code shape files. It computes the 
         distance between each school and each zip code. It then links the closest elementary, middle, and high
         schools to a zip code.
 
-3) cleancommoncore.py
+3) cleancommoncore.py (depricated under current version)
 	* This file takes in the directory, membership, lunch, staff, and school characteristic data from the
         2019 Common Core Data and cleans and merges them into one analytic file. 
 
@@ -19,3 +21,34 @@ Steps necessary to reproduce the project deliverables from the coding perspectiv
 	  Communities Survey data (2019), with Common Core data from the 2018-19 school
 	  year, and Rural Urban Commuting Area codes. All data are mapped to a zip code.	
 	  The final output is a single observation per zip code.  
+
+Analysis
+
+5) global_moran_timeseries.py
+	* This file computes Global Moran's I for each month of the data to determine whether or not home-prices have become more or
+        less similar based on geographic proximity. It supports imputed and non-imputed time-series.
+
+6) regression_diagnostics.py
+	* Performs regression diagnostics on various models predicting home values as a function of key neighborhood and housing characteristics
+
+7) coef_plot_regression.py
+	* After examining the regression diagnostics and picking a candidate model, this file loops through all months of the dataset, performs the 
+	  the regression model, stores coefficients, and plots them. 
+
+8) ZHVI_time_series.py
+	* Simple descriptive analysis of ZHVI over time.
+
+TO DO
+
+A) Update all analysis code. The original motivation for this work was as part of a team-project from a Data Visualization class at Georgia Tech. 
+   I need to update the analysis section to refernce the files in my build. To be clear, all of the build and analysis featured in the write-up are
+   my own and do not rely on project team members contributions.
+
+B) Complete the imputation stacking model and test the results robustness to imputation.
+
+C) Incorporate the footnotes from my original write-up into the readme.
+
+D) Perform additonal robustness checks mentioned in the footnotes. 
+
+E) If graduate school, two children under five, and my full time job permit me... pull in the Stanford Education Data Archive data from 2019 to assess
+   the extent to which home price trajectories varied by school quality (as measured by standardized test scores).    
