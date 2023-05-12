@@ -1,0 +1,21 @@
+Steps necessary to reproduce the project deliverables from the coding perspective
+
+1) acs_build.py
+	* This file pulls in the 2019 Data Profile variables from the American Communities Survey API 
+        and does some minimal cleaning. It relies on the acs5_2019_dict dictionary from the proj_globals.py file
+        and the dppull function from the ACS_DataProfile_APIPull.py files.
+
+2) Build_Zip_School_Crosswalk.py
+	* This file takes in NCES EDGE data, Common Core Data, and TigerLines Zip Code shape files. It computes the 
+        distance between each school and each zip code. It then links the closest elementary, middle, and high
+        schools to a zip code.
+
+3) cleancommoncore.py
+	* This file takes in the directory, membership, lunch, staff, and school characteristic data from the
+        2019 Common Core Data and cleans and merges them into one analytic file. 
+
+4) Assemble_2019_CrossSectional.py
+	* This combines the Data Profile tables from the five year estimates of American
+	  Communities Survey data (2019), with Common Core data from the 2018-19 school
+	  year, and Rural Urban Commuting Area codes. All data are mapped to a zip code.	
+	  The final output is a single observation per zip code.  

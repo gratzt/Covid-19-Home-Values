@@ -1,0 +1,826 @@
+
+
+-------------------------------------------------------
+02/28/2022 without housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :  02/28/2022                Number of Observations:       25064
+Mean dependent var  : 301681.2797                Number of Variables   :          20
+S.D. dependent var  : 286606.5674                Degrees of Freedom    :       25044
+R-squared           :      0.4866
+Adjusted R-squared  :      0.4862
+Sum squared residual:1056939497860937.000                F-statistic           :   1249.3643
+Sigma-square        :42203302102.737                Prob(F-statistic)     :           0
+S.E. of regression  :  205434.423                Log likelihood        : -342159.230
+Sigma-square ML     :42169625672.715                Akaike info criterion :  684358.459
+S.E of regression ML: 205352.4426                Schwarz criterion     :  684521.043
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT    -131431.5278031    20210.5121713      -6.5031270       0.0000000
+            Per_AIAN    -8345.9124863    36761.8925810      -0.2270262       0.8204052
+           Per_Asian    963161.7759134    25158.4696823      38.2837982       0.0000000
+           Per_Black    -137107.1767715    9428.9938449     -14.5410188       0.0000000
+        Per_Hispanic    247481.6343439    9163.9870314      27.0058909       0.0000000
+            Per_NHPI    1014242.9066092    129783.1393265       7.8149050       0.0000000
+       Per_OtherRace    1110757.1670641    159197.5510562       6.9772252       0.0000000
+     Per_TwoPlusRace    266783.7565198    50046.4874357       5.3307189       0.0000001
+           stutch_q2    -5877.4496325    3736.0124164      -1.5731879       0.1156879
+           stutch_q3     187.7393558    3804.8679723       0.0493419       0.9606472
+           stutch_q4    79556.5301952    3878.9629118      20.5097424       0.0000000
+              suburb    -16977.9097113    4081.0922851      -4.1601386       0.0000319
+                town    -23085.4681805    4759.7405046      -4.8501527       0.0000012
+               rural    -17259.0009802    4316.4176992      -3.9984548       0.0000639
+       per_bach_plus    891201.6758173    10250.5465665      86.9418689       0.0000000
+       per_broadband    157361.5942186    22852.2202384       6.8860528       0.0000000
+MedianHouseholdIncome      -0.0000456       0.0000164      -2.7889794       0.0052914
+              pop_q2    -6227.5247274    3794.0539833      -1.6413906       0.1007289
+              pop_q3    -26814.3403369    4190.5334061      -6.3987893       0.0000000
+              pop_q4    -55798.2860552    4826.7023242     -11.5603330       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER           55.857
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2    10990985.301           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               19       61804.572           0.0000
+Koenker-Bassett test             19        1190.738           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_02/28/2022 without housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :  02/28/2022                Number of Observations:       25064
+Mean dependent var  :     12.3477                Number of Variables   :          20
+S.D. dependent var  :      0.7111                Degrees of Freedom    :       25044
+R-squared           :      0.6026
+Adjusted R-squared  :      0.6023
+Sum squared residual:    5036.590                F-statistic           :   1998.4874
+Sigma-square        :       0.201                Prob(F-statistic)     :           0
+S.E. of regression  :       0.448                Log likelihood        :  -15454.135
+Sigma-square ML     :       0.201                Akaike info criterion :   30948.270
+S.E of regression ML:      0.4483                Schwarz criterion     :   31110.853
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT      10.2196706       0.0441185     231.6414778       0.0000000
+            Per_AIAN       0.1729624       0.0802493       2.1553143       0.0311467
+           Per_Asian       1.2188515       0.0549196      22.1933741       0.0000000
+           Per_Black      -0.7443632       0.0205830     -36.1639868       0.0000000
+        Per_Hispanic       0.7151122       0.0200045      35.7475656       0.0000000
+            Per_NHPI       3.6475603       0.2833098      12.8748136       0.0000000
+       Per_OtherRace       3.9560849       0.3475199      11.3837662       0.0000000
+     Per_TwoPlusRace       0.2289954       0.1092488       2.0960897       0.0360842
+           stutch_q2      -0.0292858       0.0081555      -3.5909186       0.0003301
+           stutch_q3      -0.0274861       0.0083058      -3.3092508       0.0009368
+           stutch_q4       0.1242758       0.0084676      14.6766702       0.0000000
+              suburb      -0.1296446       0.0089088     -14.5524058       0.0000000
+                town      -0.2051499       0.0103903     -19.7444411       0.0000000
+               rural      -0.1188305       0.0094225     -12.6113390       0.0000000
+       per_bach_plus       2.1532816       0.0223764      96.2300164       0.0000000
+       per_broadband       1.6140915       0.0498852      32.3561248       0.0000000
+MedianHouseholdIncome      -0.0000000       0.0000000      -2.2158876       0.0267082
+              pop_q2       0.0424497       0.0082822       5.1253979       0.0000003
+              pop_q3       0.0352404       0.0091477       3.8523735       0.0001173
+              pop_q4       0.0390188       0.0105364       3.7032221       0.0002133
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER           55.857
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2        1178.854           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               19        2572.994           0.0000
+Koenker-Bassett test             19        1695.067           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_02/28/2022 with housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :  02/28/2022                Number of Observations:       25064
+Mean dependent var  :     12.3477                Number of Variables   :          35
+S.D. dependent var  :      0.7111                Degrees of Freedom    :       25029
+R-squared           :      0.6384
+Adjusted R-squared  :      0.6379
+Sum squared residual:    4582.940                F-statistic           :   1299.4840
+Sigma-square        :       0.183                Prob(F-statistic)     :           0
+S.E. of regression  :       0.428                Log likelihood        :  -14271.257
+Sigma-square ML     :       0.183                Akaike info criterion :   28612.514
+S.E of regression ML:      0.4276                Schwarz criterion     :   28897.036
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT      11.8038803       0.5159109      22.8796881       0.0000000
+            Per_AIAN      -0.0504150       0.0770173      -0.6545936       0.5127354
+           Per_Asian       1.1844642       0.0532247      22.2540187       0.0000000
+           Per_Black      -0.7148376       0.0200100     -35.7240080       0.0000000
+        Per_Hispanic       0.6891282       0.0198272      34.7567377       0.0000000
+            Per_NHPI       3.0046443       0.2710739      11.0842258       0.0000000
+       Per_OtherRace       4.2972702       0.3320024      12.9434916       0.0000000
+     Per_TwoPlusRace       0.2873253       0.1046364       2.7459397       0.0060381
+           stutch_q2      -0.0492735       0.0078262      -6.2959663       0.0000000
+           stutch_q3      -0.0658012       0.0080624      -8.1614717       0.0000000
+           stutch_q4       0.0869418       0.0082123      10.5867917       0.0000000
+              suburb      -0.1231693       0.0085426     -14.4181598       0.0000000
+                town      -0.1963878       0.0099609     -19.7159153       0.0000000
+               rural      -0.1189807       0.0090896     -13.0897973       0.0000000
+       per_bach_plus       1.9558581       0.0242834      80.5430399       0.0000000
+       per_broadband       1.3493169       0.0485688      27.7815465       0.0000000
+MedianHouseholdIncome      -0.0000000       0.0000000      -1.2450453       0.2131268
+              pop_q2       0.0080263       0.0080063       1.0024957       0.3161139
+              pop_q3       0.0026928       0.0089296       0.3015573       0.7629921
+              pop_q4       0.0025334       0.0103593       0.2445480       0.8068085
+   units_median_room       0.0000000       0.0000000       1.7750113       0.0759082
+        per_none_bed       0.7572858       0.1285190       5.8924018       0.0000000
+           per_2_bed      -0.4510985       0.0647255      -6.9694060       0.0000000
+           per_3_bed      -0.3092570       0.0515183      -6.0028597       0.0000000
+           per_4_bed      -0.2011284       0.0576343      -3.4897362       0.0004843
+       per_5plus_bed       0.9427770       0.0787478      11.9720988       0.0000000
+ per_built_2010_2013      -1.4917443       0.5221312      -2.8570294       0.0042798
+ per_built_2000_2009      -0.4417697       0.5143336      -0.8589166       0.3903947
+ per_built_1990_1999      -0.9015422       0.5121708      -1.7602375       0.0783798
+ per_built_1980_1989      -0.6468500       0.5123036      -1.2626301       0.2067339
+ per_built_1970_1979      -1.0185355       0.5127866      -1.9862755       0.0470136
+ per_built_1960_1969      -1.1481983       0.5126786      -2.2396066       0.0251252
+ per_built_1950_1959      -1.1081924       0.5132013      -2.1593717       0.0308308
+ per_built_1940_1949      -1.5737235       0.5159459      -3.0501715       0.0022895
+per_built_1939earlier      -1.4035579       0.5112576      -2.7453050       0.0060498
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER          808.832
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2        1446.827           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               34        4421.778           0.0000
+Koenker-Bassett test             34        2784.045           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_02/28/2022 with housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :  02/28/2022                Number of Observations:       25064
+Mean dependent var  :     12.3477                Number of Variables   :          35
+S.D. dependent var  :      0.7111                Degrees of Freedom    :       25029
+R-squared           :      0.6384
+Adjusted R-squared  :      0.6379
+Sum squared residual:    4582.940                F-statistic           :   1299.4840
+Sigma-square        :       0.183                Prob(F-statistic)     :           0
+S.E. of regression  :       0.428                Log likelihood        :  -14271.257
+Sigma-square ML     :       0.183                Akaike info criterion :   28612.514
+S.E of regression ML:      0.4276                Schwarz criterion     :   28897.036
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT      11.8038803       0.5159109      22.8796881       0.0000000
+            Per_AIAN      -0.0504150       0.0770173      -0.6545936       0.5127354
+           Per_Asian       1.1844642       0.0532247      22.2540187       0.0000000
+           Per_Black      -0.7148376       0.0200100     -35.7240080       0.0000000
+        Per_Hispanic       0.6891282       0.0198272      34.7567377       0.0000000
+            Per_NHPI       3.0046443       0.2710739      11.0842258       0.0000000
+       Per_OtherRace       4.2972702       0.3320024      12.9434916       0.0000000
+     Per_TwoPlusRace       0.2873253       0.1046364       2.7459397       0.0060381
+           stutch_q2      -0.0492735       0.0078262      -6.2959663       0.0000000
+           stutch_q3      -0.0658012       0.0080624      -8.1614717       0.0000000
+           stutch_q4       0.0869418       0.0082123      10.5867917       0.0000000
+              suburb      -0.1231693       0.0085426     -14.4181598       0.0000000
+                town      -0.1963878       0.0099609     -19.7159153       0.0000000
+               rural      -0.1189807       0.0090896     -13.0897973       0.0000000
+       per_bach_plus       1.9558581       0.0242834      80.5430399       0.0000000
+       per_broadband       1.3493169       0.0485688      27.7815465       0.0000000
+MedianHouseholdIncome      -0.0000000       0.0000000      -1.2450453       0.2131268
+              pop_q2       0.0080263       0.0080063       1.0024957       0.3161139
+              pop_q3       0.0026928       0.0089296       0.3015573       0.7629921
+              pop_q4       0.0025334       0.0103593       0.2445480       0.8068085
+   units_median_room       0.0000000       0.0000000       1.7750113       0.0759082
+        per_none_bed       0.7572858       0.1285190       5.8924018       0.0000000
+           per_2_bed      -0.4510985       0.0647255      -6.9694060       0.0000000
+           per_3_bed      -0.3092570       0.0515183      -6.0028597       0.0000000
+           per_4_bed      -0.2011284       0.0576343      -3.4897362       0.0004843
+       per_5plus_bed       0.9427770       0.0787478      11.9720988       0.0000000
+ per_built_2010_2013      -1.4917443       0.5221312      -2.8570294       0.0042798
+ per_built_2000_2009      -0.4417697       0.5143336      -0.8589166       0.3903947
+ per_built_1990_1999      -0.9015422       0.5121708      -1.7602375       0.0783798
+ per_built_1980_1989      -0.6468500       0.5123036      -1.2626301       0.2067339
+ per_built_1970_1979      -1.0185355       0.5127866      -1.9862755       0.0470136
+ per_built_1960_1969      -1.1481983       0.5126786      -2.2396066       0.0251252
+ per_built_1950_1959      -1.1081924       0.5132013      -2.1593717       0.0308308
+ per_built_1940_1949      -1.5737235       0.5159459      -3.0501715       0.0022895
+per_built_1939earlier      -1.4035579       0.5112576      -2.7453050       0.0060498
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER          808.832
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2        1446.827           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               34        4421.778           0.0000
+Koenker-Bassett test             34        2784.045           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+per_change_1 without housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :per_change_1                Number of Observations:       25064
+Mean dependent var  :      1.2988                Number of Variables   :          20
+S.D. dependent var  :      0.1679                Degrees of Freedom    :       25044
+R-squared           :      0.0963
+Adjusted R-squared  :      0.0956
+Sum squared residual:     638.316                F-statistic           :    140.5022
+Sigma-square        :       0.025                Prob(F-statistic)     :           0
+S.E. of regression  :       0.160                Log likelihood        :   10432.611
+Sigma-square ML     :       0.025                Akaike info criterion :  -20825.223
+S.E of regression ML:      0.1596                Schwarz criterion     :  -20662.639
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       1.2556184       0.0157062      79.9443288       0.0000000
+            Per_AIAN       0.1574425       0.0285687       5.5110120       0.0000000
+           Per_Asian      -0.2225994       0.0195514     -11.3853697       0.0000000
+           Per_Black       0.0614167       0.0073275       8.3816306       0.0000000
+        Per_Hispanic       0.0330783       0.0071216       4.6447834       0.0000034
+            Per_NHPI      -0.1283039       0.1008581      -1.2721225       0.2033414
+       Per_OtherRace      -0.0008108       0.1237169      -0.0065537       0.9947710
+     Per_TwoPlusRace       0.4184637       0.0388925      10.7594845       0.0000000
+           stutch_q2      -0.0045517       0.0029034      -1.5677509       0.1169519
+           stutch_q3      -0.0026469       0.0029569      -0.8951558       0.3707124
+           stutch_q4      -0.0040649       0.0030145      -1.3484830       0.1775153
+              suburb       0.0270073       0.0031715       8.5155369       0.0000000
+                town       0.0412219       0.0036989      11.1442753       0.0000000
+               rural       0.0966637       0.0033544      28.8169006       0.0000000
+       per_bach_plus      -0.0597531       0.0079660      -7.5010326       0.0000000
+       per_broadband       0.0640591       0.0177591       3.6071144       0.0003102
+MedianHouseholdIncome       0.0000000       0.0000000       0.0143490       0.9885516
+              pop_q2      -0.0431545       0.0029485     -14.6362610       0.0000000
+              pop_q3      -0.0453059       0.0032566     -13.9120906       0.0000000
+              pop_q4      -0.0426915       0.0037510     -11.3814668       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER           55.857
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2     2770881.528           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               19       16635.562           0.0000
+Koenker-Bassett test             19         631.702           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_per_change_1 without housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :per_change_1                Number of Observations:       25064
+Mean dependent var  :      0.2548                Number of Variables   :          20
+S.D. dependent var  :      0.1097                Degrees of Freedom    :       25044
+R-squared           :      0.1039
+Adjusted R-squared  :      0.1032
+Sum squared residual:     270.276                F-statistic           :    152.8003
+Sigma-square        :       0.011                Prob(F-statistic)     :           0
+S.E. of regression  :       0.104                Log likelihood        :   21202.486
+Sigma-square ML     :       0.011                Akaike info criterion :  -42364.973
+S.E of regression ML:      0.1038                Schwarz criterion     :  -42202.389
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.2225031       0.0102201      21.7710886       0.0000000
+            Per_AIAN       0.1168764       0.0185899       6.2871021       0.0000000
+           Per_Asian      -0.1788143       0.0127222     -14.0552790       0.0000000
+           Per_Black       0.0413680       0.0047681       8.6760291       0.0000000
+        Per_Hispanic       0.0243753       0.0046341       5.2600187       0.0000001
+            Per_NHPI      -0.0475626       0.0656292      -0.7247183       0.4686317
+       Per_OtherRace      -0.0068518       0.0805035      -0.0851118       0.9321732
+     Per_TwoPlusRace       0.2864217       0.0253077      11.3175870       0.0000000
+           stutch_q2      -0.0022434       0.0018892      -1.1874719       0.2350528
+           stutch_q3      -0.0001035       0.0019241      -0.0537963       0.9570979
+           stutch_q4      -0.0007443       0.0019615      -0.3794434       0.7043618
+              suburb       0.0194960       0.0020637       9.4469044       0.0000000
+                town       0.0292483       0.0024069      12.1517493       0.0000000
+               rural       0.0638392       0.0021827      29.2472856       0.0000000
+       per_bach_plus      -0.0454640       0.0051835      -8.7708498       0.0000000
+       per_broadband       0.0442440       0.0115560       3.8286633       0.0001292
+MedianHouseholdIncome      -0.0000000       0.0000000      -0.8077079       0.4192664
+              pop_q2      -0.0250315       0.0019186     -13.0468252       0.0000000
+              pop_q3      -0.0274083       0.0021191     -12.9340199       0.0000000
+              pop_q4      -0.0250701       0.0024408     -10.2713423       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER           55.857
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2      192881.878           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               19        7282.104           0.0000
+Koenker-Bassett test             19         965.997           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_per_change_1 with housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :per_change_1                Number of Observations:       25064
+Mean dependent var  :      0.2548                Number of Variables   :          35
+S.D. dependent var  :      0.1097                Degrees of Freedom    :       25029
+R-squared           :      0.1366
+Adjusted R-squared  :      0.1354
+Sum squared residual:     260.413                F-statistic           :    116.4511
+Sigma-square        :       0.010                Prob(F-statistic)     :           0
+S.E. of regression  :       0.102                Log likelihood        :   21668.370
+Sigma-square ML     :       0.010                Akaike info criterion :  -43266.741
+S.E of regression ML:      0.1019                Schwarz criterion     :  -42982.219
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.5879315       0.1229798       4.7807178       0.0000018
+            Per_AIAN       0.1032262       0.0183589       5.6226697       0.0000000
+           Per_Asian      -0.1519325       0.0126874     -11.9750713       0.0000000
+           Per_Black       0.0531943       0.0047699      11.1521507       0.0000000
+        Per_Hispanic       0.0324051       0.0047263       6.8563517       0.0000000
+            Per_NHPI      -0.0720934       0.0646170      -1.1157034       0.2645598
+       Per_OtherRace       0.0384988       0.0791407       0.4864595       0.6266457
+     Per_TwoPlusRace       0.2930635       0.0249426      11.7495136       0.0000000
+           stutch_q2      -0.0055488       0.0018656      -2.9743323       0.0029391
+           stutch_q3      -0.0060886       0.0019219      -3.1680561       0.0015365
+           stutch_q4      -0.0051790       0.0019576      -2.6456126       0.0081594
+              suburb       0.0184622       0.0020363       9.0663514       0.0000000
+                town       0.0285754       0.0023744      12.0347010       0.0000000
+               rural       0.0616945       0.0021667      28.4737013       0.0000000
+       per_bach_plus      -0.0418829       0.0057885      -7.2355064       0.0000000
+       per_broadband       0.0184633       0.0115775       1.5947502       0.1107807
+MedianHouseholdIncome      -0.0000000       0.0000000      -0.0687292       0.9452057
+              pop_q2      -0.0258367       0.0019085     -13.5377074       0.0000000
+              pop_q3      -0.0274009       0.0021286     -12.8727937       0.0000000
+              pop_q4      -0.0259640       0.0024694     -10.5143297       0.0000000
+   units_median_room      -0.0000000       0.0000000      -1.1336592       0.2569484
+        per_none_bed       0.0064285       0.0306356       0.2098389       0.8337951
+           per_2_bed       0.1802337       0.0154289      11.6815757       0.0000000
+           per_3_bed       0.0766368       0.0122806       6.2404676       0.0000000
+           per_4_bed       0.0265600       0.0137385       1.9332543       0.0532161
+       per_5plus_bed       0.2547643       0.0187714      13.5719085       0.0000000
+ per_built_2010_2013      -0.4107734       0.1244625      -3.3003783       0.0009669
+ per_built_2000_2009      -0.3689359       0.1226038      -3.0091725       0.0026222
+ per_built_1990_1999      -0.4193823       0.1220882      -3.4350763       0.0005933
+ per_built_1980_1989      -0.3958971       0.1221199      -3.2418724       0.0011890
+ per_built_1970_1979      -0.4574395       0.1222350      -3.7422951       0.0001828
+ per_built_1960_1969      -0.4973878       0.1222093      -4.0699686       0.0000472
+ per_built_1950_1959      -0.4948390       0.1223339      -4.0449877       0.0000525
+ per_built_1940_1949      -0.4295873       0.1229881      -3.4929174       0.0004786
+per_built_1939earlier      -0.4608156       0.1218705      -3.7811896       0.0001564
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER          808.832
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2      242867.189           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               34        9954.543           0.0000
+Koenker-Bassett test             34        1190.985           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_per_change_1 with housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :per_change_1                Number of Observations:       25064
+Mean dependent var  :      0.2548                Number of Variables   :          35
+S.D. dependent var  :      0.1097                Degrees of Freedom    :       25029
+R-squared           :      0.1366
+Adjusted R-squared  :      0.1354
+Sum squared residual:     260.413                F-statistic           :    116.4511
+Sigma-square        :       0.010                Prob(F-statistic)     :           0
+S.E. of regression  :       0.102                Log likelihood        :   21668.370
+Sigma-square ML     :       0.010                Akaike info criterion :  -43266.741
+S.E of regression ML:      0.1019                Schwarz criterion     :  -42982.219
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.5879315       0.1229798       4.7807178       0.0000018
+            Per_AIAN       0.1032262       0.0183589       5.6226697       0.0000000
+           Per_Asian      -0.1519325       0.0126874     -11.9750713       0.0000000
+           Per_Black       0.0531943       0.0047699      11.1521507       0.0000000
+        Per_Hispanic       0.0324051       0.0047263       6.8563517       0.0000000
+            Per_NHPI      -0.0720934       0.0646170      -1.1157034       0.2645598
+       Per_OtherRace       0.0384988       0.0791407       0.4864595       0.6266457
+     Per_TwoPlusRace       0.2930635       0.0249426      11.7495136       0.0000000
+           stutch_q2      -0.0055488       0.0018656      -2.9743323       0.0029391
+           stutch_q3      -0.0060886       0.0019219      -3.1680561       0.0015365
+           stutch_q4      -0.0051790       0.0019576      -2.6456126       0.0081594
+              suburb       0.0184622       0.0020363       9.0663514       0.0000000
+                town       0.0285754       0.0023744      12.0347010       0.0000000
+               rural       0.0616945       0.0021667      28.4737013       0.0000000
+       per_bach_plus      -0.0418829       0.0057885      -7.2355064       0.0000000
+       per_broadband       0.0184633       0.0115775       1.5947502       0.1107807
+MedianHouseholdIncome      -0.0000000       0.0000000      -0.0687292       0.9452057
+              pop_q2      -0.0258367       0.0019085     -13.5377074       0.0000000
+              pop_q3      -0.0274009       0.0021286     -12.8727937       0.0000000
+              pop_q4      -0.0259640       0.0024694     -10.5143297       0.0000000
+   units_median_room      -0.0000000       0.0000000      -1.1336592       0.2569484
+        per_none_bed       0.0064285       0.0306356       0.2098389       0.8337951
+           per_2_bed       0.1802337       0.0154289      11.6815757       0.0000000
+           per_3_bed       0.0766368       0.0122806       6.2404676       0.0000000
+           per_4_bed       0.0265600       0.0137385       1.9332543       0.0532161
+       per_5plus_bed       0.2547643       0.0187714      13.5719085       0.0000000
+ per_built_2010_2013      -0.4107734       0.1244625      -3.3003783       0.0009669
+ per_built_2000_2009      -0.3689359       0.1226038      -3.0091725       0.0026222
+ per_built_1990_1999      -0.4193823       0.1220882      -3.4350763       0.0005933
+ per_built_1980_1989      -0.3958971       0.1221199      -3.2418724       0.0011890
+ per_built_1970_1979      -0.4574395       0.1222350      -3.7422951       0.0001828
+ per_built_1960_1969      -0.4973878       0.1222093      -4.0699686       0.0000472
+ per_built_1950_1959      -0.4948390       0.1223339      -4.0449877       0.0000525
+ per_built_1940_1949      -0.4295873       0.1229881      -3.4929174       0.0004786
+per_built_1939earlier      -0.4608156       0.1218705      -3.7811896       0.0001564
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER          808.832
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2      242867.189           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               34        9954.543           0.0000
+Koenker-Bassett test             34        1190.985           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+02/28/2022 without housing controls and temporal lag
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  : temporallag                Number of Observations:       25064
+Mean dependent var  : 301681.2797                Number of Variables   :          21
+S.D. dependent var  : 286606.5674                Degrees of Freedom    :       25043
+R-squared           :      0.9822
+Adjusted R-squared  :      0.9822
+Sum squared residual:36614380023313.719                F-statistic           :  69153.9037
+Sigma-square        :1462060456.947                Prob(F-statistic)     :           0
+S.E. of regression  :   38236.899                Log likelihood        : -300017.977
+Sigma-square ML     :1460835462.149                Akaike info criterion :  600077.955
+S.E of regression ML:  38220.8773                Schwarz criterion     :  600248.668
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT    -33897.4829574    3763.5340362      -9.0068225       0.0000000
+            Per_AIAN    22858.2002212    6842.4838680       3.3406290       0.0008371
+           Per_Asian    -181549.1051507    4879.0446079     -37.2099703       0.0000000
+           Per_Black    4349.7560650    1763.1407323       2.4670498       0.0136298
+        Per_Hispanic     903.7350495    1731.0167287       0.5220834       0.6016169
+            Per_NHPI    78513.1322651    24182.1063053       3.2467450       0.0011689
+       Per_OtherRace    -49346.8540036    29663.4916801      -1.6635551       0.0962139
+     Per_TwoPlusRace    36158.7148171    9319.0941837       3.8800675       0.0001047
+           stutch_q2    -419.8834055     695.4035860      -0.6037982       0.5459833
+           stutch_q3    2013.5047302     708.1921506       2.8431616       0.0044705
+           stutch_q4    2630.9819561     727.8285225       3.6148377       0.0003011
+              suburb    8439.6784511     760.2107131      11.1017621       0.0000000
+                town    10361.5670517     886.8206366      11.6839490       0.0000000
+               rural    15728.0719836     804.3718261      19.5532358       0.0000000
+       per_bach_plus    -30432.9252746    2203.9163858     -13.8085662       0.0000000
+       per_broadband    39013.4299818    4255.7745397       9.1671750       0.0000000
+MedianHouseholdIncome      -0.0000133       0.0000030      -4.3666768       0.0000127
+              pop_q2    -4059.7593762     706.1807703      -5.7488954       0.0000000
+              pop_q3    -5059.9057841     780.4061433      -6.4836827       0.0000000
+              pop_q4    -4004.7463877     900.5166111      -4.4471655       0.0000087
+          02/29/2020       1.3118831       0.0015704     835.3849047       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER           58.636
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2     6213599.252           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               20      169271.430           0.0000
+Koenker-Bassett test             20        4285.761           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_02/28/2022 without housing controls and temporal lag
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  : temporallag                Number of Observations:       25064
+Mean dependent var  :     12.3477                Number of Variables   :          21
+S.D. dependent var  :      0.7111                Degrees of Freedom    :       25043
+R-squared           :      0.9789
+Adjusted R-squared  :      0.9789
+Sum squared residual:     266.856                F-statistic           :  58212.3103
+Sigma-square        :       0.011                Prob(F-statistic)     :           0
+S.E. of regression  :       0.103                Log likelihood        :   21362.050
+Sigma-square ML     :       0.011                Akaike info criterion :  -42682.100
+S.E of regression ML:      0.1032                Schwarz criterion     :  -42511.387
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.4831989       0.0177460      27.2285923       0.0000000
+            Per_AIAN       0.1183390       0.0184724       6.4062417       0.0000000
+           Per_Asian      -0.1423674       0.0128044     -11.1186217       0.0000000
+           Per_Black       0.0208785       0.0048740       4.2836330       0.0000185
+        Per_Hispanic       0.0423876       0.0047133       8.9932689       0.0000000
+            Per_NHPI       0.0487950       0.0654354       0.7456962       0.4558580
+       Per_OtherRace       0.0964896       0.0802020       1.2030820       0.2289560
+     Per_TwoPlusRace       0.2849242       0.0251477      11.3300287       0.0000000
+           stutch_q2      -0.0029486       0.0018777      -1.5703263       0.1163518
+           stutch_q3      -0.0008176       0.0019123      -0.4275274       0.6689989
+           stutch_q4       0.0025159       0.0019576       1.2851763       0.1987426
+              suburb       0.0156068       0.0020621       7.5682471       0.0000000
+                town       0.0231359       0.0024159       9.5764699       0.0000000
+               rural       0.0590757       0.0021852      27.0348351       0.0000000
+       per_bach_plus       0.0118727       0.0060642       1.9578224       0.0502619
+       per_broadband       0.0851808       0.0117081       7.2753979       0.0000000
+MedianHouseholdIncome      -0.0000000       0.0000000      -1.0425977       0.2971447
+              pop_q2      -0.0232718       0.0019090     -12.1906894       0.0000000
+              pop_q3      -0.0257746       0.0021077     -12.2290507       0.0000000
+              pop_q4      -0.0233989       0.0024271      -9.6405291       0.0000000
+       ln_02/29/2020       0.9739230       0.0014557     669.0390718       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER           99.018
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2      144097.897           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               20       12283.702           0.0000
+Koenker-Bassett test             20        1847.601           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+02/28/2022 with housing controls and temporal lag
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  : temporallag                Number of Observations:       25064
+Mean dependent var  : 301681.2797                Number of Variables   :          36
+S.D. dependent var  : 286606.5674                Degrees of Freedom    :       25028
+R-squared           :      0.9835
+Adjusted R-squared  :      0.9834
+Sum squared residual:34066782026469.172                F-statistic           :  42499.6956
+Sigma-square        :1361146796.647                Prob(F-statistic)     :           0
+S.E. of regression  :   36893.723                Log likelihood        : -299114.191
+Sigma-square ML     :1359191750.178                Akaike info criterion :  598300.382
+S.E of regression ML:  36867.2178                Schwarz criterion     :  598593.033
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT    81317.4669275    44481.6300093       1.8281135       0.0675444
+            Per_AIAN    8435.0508844    6640.5458303       1.2702346       0.2040129
+           Per_Asian    -166421.2957000    4764.4891368     -34.9295152       0.0000000
+           Per_Black    9808.1350696    1733.5659784       5.6577801       0.0000000
+        Per_Hispanic    5813.5091231    1731.3085773       3.3578700       0.0007866
+            Per_NHPI    53315.5103638    23390.4929031       2.2793667       0.0226537
+       Per_OtherRace    -11210.8840500    28659.2200481      -0.3911790       0.6956683
+     Per_TwoPlusRace    42042.2149995    9026.3615014       4.6577145       0.0000032
+           stutch_q2    -2715.9963774     674.7834919      -4.0249894       0.0000571
+           stutch_q3    -2052.7128389     695.1324147      -2.9529810       0.0031501
+           stutch_q4    -719.8318884     713.4206608      -1.0089866       0.3129908
+              suburb    8090.6734935     737.0806966      10.9766455       0.0000000
+                town    10442.3889507     859.8048904      12.1450681       0.0000000
+               rural    15848.5396427     785.0175279      20.1887717       0.0000000
+       per_bach_plus    -24195.1436195    2321.9635355     -10.4201221       0.0000000
+       per_broadband    20626.4177398    4189.7860825       4.9230241       0.0000009
+MedianHouseholdIncome      -0.0000104       0.0000030      -3.4860738       0.0004910
+              pop_q2    -6084.7473331     690.3149375      -8.8144512       0.0000000
+              pop_q3    -7286.2641849     770.3650399      -9.4581968       0.0000000
+              pop_q4    -7056.1432869     895.2474680      -7.8817797       0.0000000
+   units_median_room       0.0000033       0.0000212       0.1562249       0.8758570
+        per_none_bed    -64600.7431298    11107.5606115      -5.8159253       0.0000000
+           per_2_bed    63799.5629164    5580.5600392      11.4324660       0.0000000
+           per_3_bed    28815.0613156    4441.9785697       6.4869879       0.0000000
+           per_4_bed    15879.2859146    4969.1593971       3.1955678       0.0013973
+       per_5plus_bed    72498.9957187    6845.8137011      10.5902671       0.0000000
+ per_built_2010_2013    -117766.4394217    45022.1504024      -2.6157444       0.0089087
+ per_built_2000_2009    -104319.0163393    44346.2812221      -2.3523735       0.0186617
+ per_built_1990_1999    -123521.9806643    44160.1377550      -2.7971376       0.0051597
+ per_built_1980_1989    -112350.7081347    44171.0554229      -2.5435369       0.0109796
+ per_built_1970_1979    -119425.5595322    44213.0839700      -2.7011362       0.0069150
+ per_built_1960_1969    -152981.9904222    44203.3039516      -3.4608723       0.0005393
+ per_built_1950_1959    -147189.7754040    44248.7460000      -3.3264169       0.0008810
+ per_built_1940_1949    -147451.4426956    44484.8675041      -3.3146427       0.0009189
+per_built_1939earlier    -160235.7826519    44082.1727164      -3.6349339       0.0002786
+          02/29/2020       1.3115222       0.0015426     850.1878185       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER          824.558
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2     7435145.687           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               35      178567.125           0.0000
+Koenker-Bassett test             35        4143.703           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_02/28/2022 with housing controls and temporal lag
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  : temporallag                Number of Observations:       25064
+Mean dependent var  :     12.3477                Number of Variables   :          36
+S.D. dependent var  :      0.7111                Degrees of Freedom    :       25028
+R-squared           :      0.9799
+Adjusted R-squared  :      0.9799
+Sum squared residual:     254.888                F-statistic           :  34838.8040
+Sigma-square        :       0.010                Prob(F-statistic)     :           0
+S.E. of regression  :       0.101                Log likelihood        :   21937.089
+Sigma-square ML     :       0.010                Akaike info criterion :  -43802.179
+S.E of regression ML:      0.1008                Schwarz criterion     :  -43509.528
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.9748242       0.1227994       7.9383437       0.0000000
+            Per_AIAN       0.0979263       0.0181649       5.3909551       0.0000001
+           Per_Asian      -0.1058336       0.0127074      -8.3284801       0.0000000
+           Per_Black       0.0267011       0.0048542       5.5005620       0.0000000
+        Per_Hispanic       0.0550587       0.0047761      11.5280372       0.0000000
+            Per_NHPI       0.0340383       0.0640914       0.5310900       0.5953611
+       Per_OtherRace       0.1854045       0.0785520       2.3602777       0.0182689
+     Per_TwoPlusRace       0.2928656       0.0246771      11.8679026       0.0000000
+           stutch_q2      -0.0070571       0.0018468      -3.8211635       0.0001331
+           stutch_q3      -0.0081484       0.0019035      -4.2808004       0.0000187
+           stutch_q4      -0.0020013       0.0019416      -1.0307932       0.3026478
+              suburb       0.0135767       0.0020256       6.7026695       0.0000000
+                town       0.0208153       0.0023727       8.7730117       0.0000000
+               rural       0.0554621       0.0021603      25.6734389       0.0000000
+       per_bach_plus       0.0270289       0.0064461       4.1930789       0.0000276
+       per_broadband       0.0643709       0.0116227       5.5383960       0.0000000
+MedianHouseholdIncome      -0.0000000       0.0000000      -0.2491726       0.8032293
+              pop_q2      -0.0246686       0.0018889     -13.0601142       0.0000000
+              pop_q3      -0.0263628       0.0021064     -12.5155566       0.0000000
+              pop_q4      -0.0249810       0.0024435     -10.2235643       0.0000000
+   units_median_room      -0.0000000       0.0000000      -0.8466364       0.3972059
+        per_none_bed       0.0323293       0.0303299       1.0659206       0.2864698
+           per_2_bed       0.1584560       0.0152933      10.3611591       0.0000000
+           per_3_bed       0.0633255       0.0121633       5.2062569       0.0000002
+           per_4_bed       0.0187060       0.0135965       1.3757962       0.1688971
+       per_5plus_bed       0.2784972       0.0185996      14.9733165       0.0000000
+ per_built_2010_2013      -0.4480614       0.1231481      -3.6383940       0.0002749
+ per_built_2000_2009      -0.3714483       0.1212988      -3.0622588       0.0021991
+ per_built_1990_1999      -0.4360144       0.1207908      -3.6096659       0.0003072
+ per_built_1980_1989      -0.4045536       0.1208206      -3.3483838       0.0008140
+ per_built_1970_1979      -0.4767944       0.1209368      -3.9425101       0.0000809
+ per_built_1960_1969      -0.5198375       0.1209123      -4.2992946       0.0000172
+ per_built_1950_1959      -0.5159965       0.1210351      -4.2631968       0.0000202
+ per_built_1940_1949      -0.4690541       0.1216908      -3.8544753       0.0001163
+per_built_1939earlier      -0.4933353       0.1205814      -4.0913059       0.0000430
+       ln_02/29/2020       0.9655051       0.0014811     651.9052607       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER          840.556
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2      174415.079           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               35       14606.128           0.0000
+Koenker-Bassett test             35        2018.423           0.0000
+================================ END OF REPORT =====================================
