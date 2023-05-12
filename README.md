@@ -34,7 +34,8 @@ Figure 1 below depicts the coefficients from Equation 1 for suburban, town, and 
 All categories, suburban, towns, and rural zip codes, have ZHVI that are at a minimum 3% less in value that urban zip codes, all else equal. At the same time all categories were appreciating ZHVI gains prior to the pandemic relative to urban zip codes. However, consistent with prior literature, after the start of lockdowns and by the beginning of 2021 or earlier there exists a rapid increase in ZHVI for all three categories. For example, the ZHVI for suburban zip codes was 4.3% lower than urban zip codes at the start of the pandemic (February, 2020), but only 2.9% lower on the eve of Federal Fund rate increases. However, after the Federal Funds rate was raised in March of 2022 the steep ascent of suburban, town, and rural zip codes’ ZHVI relative to urban zip codes plateaus. The relative gains made by these categories remain remarkably stable throughout the rest of the year. 
 
 ### Figure 1: Percent Change in the Zillow Home Value Index By Urbanicity
-[INSERT IMAGE HERE]
+
+![alt text](https://github.com/gratzt/Covid-19-Home-Values/blob/main/LogsOutput/CoefPlots/UrbanicityCoefficients.png)
 
 
 These results clearly confirm prior findings of the relationship between the changes to home-prices based on urbanicity. They also help pinpoint when in the pandemic prices started to change, XX for rural locations and YY for town and suburban locations. 
