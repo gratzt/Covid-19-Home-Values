@@ -27,19 +27,12 @@ today = datetime.date.today()
 # sys.stdout = log_file
 
 #############
-## Clusters
-clust = pd.read_csv(r'..\..\..\CSE 6242 Project Data\pca_kmeans_impmean_cluster.csv')
-clust = clust.drop_duplicates('ZCTA5CE10')
-clust = clust[['ZCTA5CE10', 'cluster']]
-clust['cluster'] = clust['cluster'].astype(str)
-#############
 # Features
-feat = pd.read_csv(r'..\..\..\CSE 6242 Project Data\Imputed Data\features2019_impmedian_normclust.csv')
-feat = feat.drop_duplicates('ZIP')
-feat = feat.rename(columns={'ZIP': 'ZCTA5CE10'})
+feat = pd.read_csv(r'..\..\..\Data\Clean Data\features2019.csv')
+
 ################
 # Zillow Data
-zillow = pd.read_excel(r'..\..\..\CSE 6242 Project Data\Raw Data with Profiles\Zillow\Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.xlsx')
+zillow = pd.read_excel(r'..\..\..\Data\Raw Data with Profiles\Zillow\Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.xlsx')
 zillow = zillow.rename(columns={'RegionName': 'ZCTA5CE10'})
 # Convert datetime columns to strings
 zillow.columns = [i if type(i) != datetime.datetime else i.strftime('%m/%d/%Y')
@@ -49,10 +42,8 @@ ys = list(zillow.columns[213:])
 
 ################
 # Zip Shape
-zdf = gpd.read_file(r'..\..\..\CSE 6242 Project Data\Geographic\zipcode\tl_2019_us_zcta510\tl_2019_us_zcta510.shp')
+zdf = gpd.read_file(r'..\..\..\Data\Geographic\zipcode\tl_2019_us_zcta510\tl_2019_us_zcta510.shp')
 zdf['ZCTA5CE10'] = zdf['ZCTA5CE10'].astype(int)
-
-
 
 ##############################################################################
 # Prep Xs
@@ -134,24 +125,19 @@ def prepX(df, housecontrols=housecontrols, variable_names=variable_names):
 feat2019 = prepX(df=feat)
 adf = pd.merge(zdf, feat2019,  on ='ZCTA5CE10')
 
-# Add Clusters
-adf = pd.merge(adf, clust, how='left', on='ZCTA5CE10')
-
 
 #############################
 # Calaculte Coeffieencts
 
 
-def calccoefs(cluster='all'):
+def calccoefs():
     ols = []
     coefdf = pd.DataFrame()    
     vardf = pd.DataFrame(['Constant'] + variable_names + housecontrols + ['W'] )
     
     # No observations of these.
     vnametemp = variable_names.copy()
-    if cluster == '0':
-         vnametemp.remove('town')
-         vnametemp.remove('rural')
+
     for y in ys:
         print(y)
         tempy = zillow[['ZCTA5CE10', y]].copy()
@@ -159,8 +145,6 @@ def calccoefs(cluster='all'):
         tempy = tempy.dropna()
         tempdf = pd.merge(adf, tempy,  on ='ZCTA5CE10')
         # Filter to Cluster if it isn't all of them
-        if cluster != 'all':
-            tempdf = tempdf.loc[tempdf['cluster'] == cluster, ]
             
         
         w = weights.KNN.from_dataframe(tempdf, k=5)
@@ -226,90 +210,21 @@ def calccoefs(cluster='all'):
 
 #################################################
 # Build Coefficient Dataframe    
-coef_cluster_all, ols_all = calccoefs(cluster='all')
-coef_cluster_all['cluster'] = 'all'    
-coef_cluster_1, ols_c1 = calccoefs(cluster='1')
-coef_cluster_1['cluster'] = '1'        
-coef_cluster_2, ols_c2 = calccoefs(cluster='2')
-coef_cluster_2['cluster'] = '2'        
-coef_cluster_3, ols_c3 = calccoefs(cluster='0')    
-coef_cluster_3['cluster'] = '0'    
-
-coefdf = pd.concat([coef_cluster_all, coef_cluster_1, coef_cluster_2,
-                    coef_cluster_3])
-
+coefdf, ols_all = calccoefs()
+ 
 tran_names = []
 for v in variable_names:
     coefdf['trans_'+v] = 100*(np.exp(coefdf[v]) - 1)
     tran_names.append('trans_'+v)
 
-outdf = coefdf[['cluster', 'month'] + tran_names].copy()
-outpath = r'..\..\..\CSE 6242 Project Data\\' + f'Coefficients_{today}.csv'
+outdf = coefdf[['month'] + tran_names].copy()
+outpath = r'..\..\..\Data\\' + f'Coefficients_{today}.csv'
 outdf.to_csv(outpath)
 
 ##############################################################################
-# Prototyping for Dashboard.
+# Main Figure
 ##############################################################################
 
-for v in tran_names:
-    fig, ax = plt.subplots()
-    fig.set_size_inches(18.5, 10.5)
-    ax.spines[['right', 'top']].set_visible(False)
-    ax.set_xlabel("Month")
-    ax.set_ylabel(f"Percent Change")
-    ax.set_title(f"Coeffients {v} predicting ZHVI over time")
-    for c in ['all', '0', '1', '2']:
-        cdf = coefdf.loc[coefdf['cluster'] == c,].copy()
-        x = cdf['month']
-        
-        if cdf[v].isna().sum() == 0 :
-        
-            ax.plot(x, cdf[v], label = f'Cluster: {c}')
-            plt.axvline(datetime.datetime(2020, 2, 29), color = 'b')
-            plt.axvline(datetime.datetime(2022, 2, 28), color = 'b')
-
-    ax.legend()    
-    savepath = r'..\..\LogsOutput\CoefPlots\\' + f'Coefficient_{v}.png'
-    plt.savefig(savepath)
-    plt.close()
-
-##############################################################################
-# Plots for Report
-##############################################################################
-
-outpath = r'C:\Users\trevo\OneDrive\Documents\Georgia Tech\Courses\CSE6242\Project\DVA-Project-Repo\CSE 6242 Project Data\Coefficients_2023-04-13.csv'
-
-coefdf = pd.read_csv(outpath)
-coefdf['month'] = pd.to_datetime(coefdf['month'])
-
-# Bachelor's Plus
-fig, ax = plt.subplots()
-fig.set_size_inches(18.5, 10.5)
-ax.spines['top'].set_visible(False)
-ax.spines['right'].set_visible(False)
-ax.set_ylabel(f"Percent Change",  fontsize=16)
-for c in ['0', '1', '2']:
-    cdf = coefdf.loc[coefdf['cluster'] == c,].copy()
-    x = cdf['month']
-        
-    ax.plot(x, cdf['trans_per_bach_plus'], label = f'Cluster: {c}')
-    plt.axvline(datetime.datetime(2020, 2, 29),
-                color = 'black', linestyle ='--')
-    plt.axvline(datetime.datetime(2022, 2, 28),
-                color = 'black', linestyle ='--')
-    
-plt.text(datetime.datetime(2020, 2, 22), 1.3, 'Last Month Prior to\nLockdowns',
-        horizontalalignment='right',  fontsize=16)
-plt.text(datetime.datetime(2022, 2, 21), 1.3, 'Last Month Prior to\nFederal Fund Rate Hikes',
-         horizontalalignment='right',  fontsize=16)
-    
-ax.legend(frameon=False,  fontsize=14) 
-ax.tick_params(axis='both', which='major', labelsize=14)
-ax.tick_params(axis='both', which='minor', labelsize=14)
-   
-savepath = r'..\..\LogsOutput\CoefPlots\\' + f'Report_PercentBachelors.png'
-plt.savefig(savepath)
-plt.close()
 
 # Urbanicity
 fig, ax = plt.subplots()
@@ -318,10 +233,9 @@ ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.set_ylabel(f"Percent Change",  fontsize=28)
 for c in [('trans_suburb', 'Suburban'), ('trans_town', 'Town'), ('trans_rural', 'Rural')]:
-    cdf = coefdf.loc[coefdf['cluster'] == 'all',].copy()
-    x = cdf['month']
+    x = coefdf['month']
         
-    ax.plot(x, cdf[c[0]], label = f'Urbanicity: {c[1]}', linewidth = 3)
+    ax.plot(x, coefdf[c[0]], label = f'Urbanicity: {c[1]}', linewidth = 3)
     plt.axvline(datetime.datetime(2020, 2, 29),
                 color = 'black', linestyle ='--')
     plt.axvline(datetime.datetime(2022, 2, 28),
@@ -330,12 +244,12 @@ for c in [('trans_suburb', 'Suburban'), ('trans_town', 'Town'), ('trans_rural', 
 plt.text(datetime.datetime(2020, 2, 22), -3, 'Lockdowns',
         horizontalalignment='right',  fontsize=26)
 plt.text(datetime.datetime(2022, 2, 21), -3, 'Federal Fund\nRate Hikes',
-         horizontalalignment='right',  fontsize=26)
+          horizontalalignment='right',  fontsize=26)
     
 ax.legend(frameon=False,  fontsize=24) 
 ax.tick_params(axis='both', which='major', labelsize=24)
 ax.tick_params(axis='both', which='minor', labelsize=24)
-   
-savepath = r'C:\Users\trevo\OneDrive\Documents\Georgia Tech\Courses\CSE6242\Project\DVA-Project-Repo\DVA-Project-Repo\LogsOutput\CoefPlots\Report_Urbaniciyt.svg'
+  
+savepath = r'..\..\LogsOutput\CoefPlots\Report_Urbaniciyt.svg'
 plt.savefig(savepath)
 plt.close()

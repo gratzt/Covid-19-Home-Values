@@ -23,20 +23,19 @@ import scipy
 today = datetime.date.today()
 
 import sys
-# old_stdout = sys.stdout
-# logpath = r'..\..\LogsOutput\\' + f'regressionlog_{today}.log'
-# log_file = open(logpath,"w")
-# sys.stdout = log_file
+old_stdout = sys.stdout
+logpath = r'..\..\LogsOutput\\' + f'regressionlog_{today}.log'
+log_file = open(logpath,"w")
+sys.stdout = log_file
 
 
 #############
 # Features
-feat = pd.read_csv(r'..\..\..\CSE 6242 Project Data\Imputed Data\features2019_impmedian_normclust.csv')
-feat = feat.drop_duplicates('ZIP')
-feat = feat.rename(columns={'ZIP': 'ZCTA5CE10'})
+feat = pd.read_csv(r'..\..\..\Data\Clean Data\features2019.csv')
+
 ################
 # Zillow Data
-zillow = pd.read_excel(r'..\..\..\CSE 6242 Project Data\Raw Data with Profiles\Zillow\Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.xlsx')
+zillow = pd.read_excel(r'..\..\..\Data\Raw Data with Profiles\Zillow\Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.xlsx')
 zillow = zillow.rename(columns={'RegionName': 'ZCTA5CE10'})
 # Convert datetime columns to strings
 zillow.columns = [i if type(i) != datetime.datetime else i.strftime('%m/%d/%Y')
@@ -49,7 +48,7 @@ ys['per_change_2'] = ys['02/28/2023']/ys['02/29/2020']
 
 ################
 # Zip Shape
-zdf = gpd.read_file(r'..\..\..\CSE 6242 Project Data\Geographic\zipcode\tl_2019_us_zcta510\tl_2019_us_zcta510.shp')
+zdf = gpd.read_file(r'..\..\..\Data\Geographic\zipcode\tl_2019_us_zcta510\tl_2019_us_zcta510.shp')
 zdf['ZCTA5CE10'] = zdf['ZCTA5CE10'].astype(int)
 
 ################

@@ -1,0 +1,1383 @@
+
+
+-------------------------------------------------------
+02/28/2022 without housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :  02/28/2022                Number of Observations:       24754
+Mean dependent var  : 301714.4946                Number of Variables   :          17
+S.D. dependent var  : 285597.3891                Degrees of Freedom    :       24737
+R-squared           :      0.5481
+Adjusted R-squared  :      0.5478
+Sum squared residual:912480499269479.375                F-statistic           :   1874.8326
+Sigma-square        :36887274094.251                Prob(F-statistic)     :           0
+S.E. of regression  :  192060.600                Log likelihood        : -336262.328
+Sigma-square ML     :36861941474.892                Akaike info criterion :  672558.656
+S.E of regression ML: 191994.6392                Schwarz criterion     :  672696.640
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT    -28403.6829280    12052.1359522      -2.3567344       0.0184442
+            Per_AIAN    13871.9229319    35693.9592587       0.3886350       0.6975495
+           Per_Asian    749875.6863225    24372.1214155      30.7677643       0.0000000
+           Per_Black    -582.9389810      88.7232667      -6.5703057       0.0000000
+        Per_Hispanic    2590.4404663      82.4519888      31.4175619       0.0000000
+            Per_NHPI    872631.6903857    124805.6079058       6.9919269       0.0000000
+       Per_OtherRace    1769741.7026339    261812.6257401       6.7595736       0.0000000
+     Per_TwoPlusRace    374323.6004673    57081.0375629       6.5577575       0.0000000
+           stutch_q2    -11074.0258687    3482.4716651      -3.1799328       0.0014749
+           stutch_q3    -6989.6049338    3523.0112548      -1.9839860       0.0472684
+           stutch_q4    70887.0968517    3592.8437208      19.7300808       0.0000000
+              suburb    7137.1482101    3855.8843899       1.8509757       0.0641850
+                town    3387.4833897    4474.5880750       0.7570492       0.4490276
+               rural    22117.5523890    3992.7192131       5.5394710       0.0000000
+       per_bach_plus    554778.5336226    12146.7363160      45.6730532       0.0000000
+       per_broadband    -203032.4311442    16323.2163187     -12.4382614       0.0000000
+MedianHouseholdIncome_10K    42857.0951282     763.4242509      56.1379797       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER           35.771
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2    10418116.835           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               16       83128.727           0.0000
+Koenker-Bassett test             16        1634.549           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_02/28/2022 without housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :  02/28/2022                Number of Observations:       24754
+Mean dependent var  :     12.3495                Number of Variables   :          17
+S.D. dependent var  :      0.7082                Degrees of Freedom    :       24737
+R-squared           :      0.6361
+Adjusted R-squared  :      0.6359
+Sum squared residual:    4517.323                F-statistic           :   2702.3654
+Sigma-square        :       0.183                Prob(F-statistic)     :           0
+S.E. of regression  :       0.427                Log likelihood        :  -14070.292
+Sigma-square ML     :       0.182                Akaike info criterion :   28174.583
+S.E of regression ML:      0.4272                Schwarz criterion     :   28312.568
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT      10.7661639       0.0268159     401.4839500       0.0000000
+            Per_AIAN       0.3603893       0.0794188       4.5378322       0.0000057
+           Per_Asian       0.8556195       0.0542278      15.7782406       0.0000000
+           Per_Black      -0.0043751       0.0001974     -22.1624807       0.0000000
+        Per_Hispanic       0.0087302       0.0001835      47.5874262       0.0000000
+            Per_NHPI       3.6639460       0.2776917      13.1942949       0.0000000
+       Per_OtherRace       6.3965603       0.5825314      10.9806269       0.0000000
+     Per_TwoPlusRace       0.5373471       0.1270049       4.2309148       0.0000234
+           stutch_q2      -0.0301702       0.0077485      -3.8936972       0.0000990
+           stutch_q3      -0.0222610       0.0078387      -2.8398942       0.0045165
+           stutch_q4       0.1228209       0.0079941      15.3640326       0.0000000
+              suburb      -0.0870754       0.0085793     -10.1494518       0.0000000
+                town      -0.1621651       0.0099559     -16.2882884       0.0000000
+               rural      -0.0655962       0.0088838      -7.3838177       0.0000000
+       per_bach_plus       1.4965206       0.0270264      55.3725253       0.0000000
+       per_broadband       0.7948710       0.0363191      21.8857851       0.0000000
+MedianHouseholdIncome_10K       0.0742792       0.0016986      43.7293048       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER           35.771
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2        1247.959           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               16        1727.602           0.0000
+Koenker-Bassett test             16        1117.471           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_02/28/2022 with housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :  02/28/2022                Number of Observations:       24754
+Mean dependent var  :     12.3495                Number of Variables   :          32
+S.D. dependent var  :      0.7082                Degrees of Freedom    :       24722
+R-squared           :      0.6869
+Adjusted R-squared  :      0.6865
+Sum squared residual:    3887.172                F-statistic           :   1749.1734
+Sigma-square        :       0.157                Prob(F-statistic)     :           0
+S.E. of regression  :       0.397                Log likelihood        :  -12210.800
+Sigma-square ML     :       0.157                Akaike info criterion :   24485.600
+S.E of regression ML:      0.3963                Schwarz criterion     :   24745.336
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT      11.6652196       0.1175046      99.2745936       0.0000000
+            Per_AIAN      -0.0590716       0.0743390      -0.7946256       0.4268390
+           Per_Asian       0.3787374       0.0525461       7.2077138       0.0000000
+           Per_Black      -0.0044091       0.0001889     -23.3363948       0.0000000
+        Per_Hispanic       0.0061884       0.0001868      33.1299561       0.0000000
+            Per_NHPI       2.6039439       0.2588188      10.0608745       0.0000000
+       Per_OtherRace       6.3823280       0.5421388      11.7724981       0.0000000
+     Per_TwoPlusRace       0.2400048       0.1182718       2.0292643       0.0424421
+           stutch_q2      -0.0407515       0.0072484      -5.6221745       0.0000000
+           stutch_q3      -0.0446648       0.0074396      -6.0036569       0.0000000
+           stutch_q4       0.0876950       0.0075721      11.5812658       0.0000000
+              suburb      -0.0837528       0.0080000     -10.4691408       0.0000000
+                town      -0.1558568       0.0092779     -16.7987926       0.0000000
+               rural      -0.0668752       0.0083912      -7.9696631       0.0000000
+       per_bach_plus       1.1451992       0.0290107      39.4751265       0.0000000
+       per_broadband       0.7699671       0.0342714      22.4667588       0.0000000
+MedianHouseholdIncome_10K       0.1045211       0.0019531      53.5151371       0.0000000
+   units_median_room      -0.2208821       0.0078954     -27.9761487       0.0000000
+        per_none_bed       0.3380307       0.1279400       2.6421039       0.0082445
+           per_2_bed      -0.3643135       0.0650756      -5.5983081       0.0000000
+           per_3_bed      -0.0733339       0.0565168      -1.2975579       0.1944514
+           per_4_bed       0.1367001       0.0776099       1.7613745       0.0781874
+       per_5plus_bed       1.6950987       0.1028490      16.4814243       0.0000000
+ per_built_2010_2013      -0.8235308       0.1743596      -4.7231734       0.0000023
+ per_built_2000_2009       0.8344062       0.1127220       7.4023382       0.0000000
+ per_built_1990_1999       0.5413075       0.1088199       4.9743411       0.0000007
+ per_built_1980_1989       0.7069721       0.1082701       6.5297100       0.0000000
+ per_built_1970_1979       0.4675966       0.1077520       4.3395646       0.0000143
+ per_built_1960_1969       0.1632088       0.1125740       1.4497921       0.1471292
+ per_built_1950_1959       0.2841595       0.1104117       2.5736363       0.0100694
+ per_built_1940_1949      -0.2432971       0.1224462      -1.9869713       0.0469366
+per_built_1939earlier       0.1085302       0.1038773       1.0447918       0.2961294
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER          199.223
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2        2451.704           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               31        4046.474           0.0000
+Koenker-Bassett test             31        2291.307           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_02/28/2022 with housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :  02/28/2022                Number of Observations:       24754
+Mean dependent var  :     12.3495                Number of Variables   :          32
+S.D. dependent var  :      0.7082                Degrees of Freedom    :       24722
+R-squared           :      0.6869
+Adjusted R-squared  :      0.6865
+Sum squared residual:    3887.172                F-statistic           :   1749.1734
+Sigma-square        :       0.157                Prob(F-statistic)     :           0
+S.E. of regression  :       0.397                Log likelihood        :  -12210.800
+Sigma-square ML     :       0.157                Akaike info criterion :   24485.600
+S.E of regression ML:      0.3963                Schwarz criterion     :   24745.336
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT      11.6652196       0.1175046      99.2745936       0.0000000
+            Per_AIAN      -0.0590716       0.0743390      -0.7946256       0.4268390
+           Per_Asian       0.3787374       0.0525461       7.2077138       0.0000000
+           Per_Black      -0.0044091       0.0001889     -23.3363948       0.0000000
+        Per_Hispanic       0.0061884       0.0001868      33.1299561       0.0000000
+            Per_NHPI       2.6039439       0.2588188      10.0608745       0.0000000
+       Per_OtherRace       6.3823280       0.5421388      11.7724981       0.0000000
+     Per_TwoPlusRace       0.2400048       0.1182718       2.0292643       0.0424421
+           stutch_q2      -0.0407515       0.0072484      -5.6221745       0.0000000
+           stutch_q3      -0.0446648       0.0074396      -6.0036569       0.0000000
+           stutch_q4       0.0876950       0.0075721      11.5812658       0.0000000
+              suburb      -0.0837528       0.0080000     -10.4691408       0.0000000
+                town      -0.1558568       0.0092779     -16.7987926       0.0000000
+               rural      -0.0668752       0.0083912      -7.9696631       0.0000000
+       per_bach_plus       1.1451992       0.0290107      39.4751265       0.0000000
+       per_broadband       0.7699671       0.0342714      22.4667588       0.0000000
+MedianHouseholdIncome_10K       0.1045211       0.0019531      53.5151371       0.0000000
+   units_median_room      -0.2208821       0.0078954     -27.9761487       0.0000000
+        per_none_bed       0.3380307       0.1279400       2.6421039       0.0082445
+           per_2_bed      -0.3643135       0.0650756      -5.5983081       0.0000000
+           per_3_bed      -0.0733339       0.0565168      -1.2975579       0.1944514
+           per_4_bed       0.1367001       0.0776099       1.7613745       0.0781874
+       per_5plus_bed       1.6950987       0.1028490      16.4814243       0.0000000
+ per_built_2010_2013      -0.8235308       0.1743596      -4.7231734       0.0000023
+ per_built_2000_2009       0.8344062       0.1127220       7.4023382       0.0000000
+ per_built_1990_1999       0.5413075       0.1088199       4.9743411       0.0000007
+ per_built_1980_1989       0.7069721       0.1082701       6.5297100       0.0000000
+ per_built_1970_1979       0.4675966       0.1077520       4.3395646       0.0000143
+ per_built_1960_1969       0.1632088       0.1125740       1.4497921       0.1471292
+ per_built_1950_1959       0.2841595       0.1104117       2.5736363       0.0100694
+ per_built_1940_1949      -0.2432971       0.1224462      -1.9869713       0.0469366
+per_built_1939earlier       0.1085302       0.1038773       1.0447918       0.2961294
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER          199.223
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2        2451.704           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               31        4046.474           0.0000
+Koenker-Bassett test             31        2291.307           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+per_change_1 without housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :per_change_1                Number of Observations:       24754
+Mean dependent var  :      1.2981                Number of Variables   :          17
+S.D. dependent var  :      0.1671                Degrees of Freedom    :       24737
+R-squared           :      0.0920
+Adjusted R-squared  :      0.0914
+Sum squared residual:     627.525                F-statistic           :    156.6192
+Sigma-square        :       0.025                Prob(F-statistic)     :           0
+S.E. of regression  :       0.159                Log likelihood        :   10360.567
+Sigma-square ML     :       0.025                Akaike info criterion :  -20687.133
+S.E of regression ML:      0.1592                Schwarz criterion     :  -20549.149
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       1.3256413       0.0099947     132.6350736       0.0000000
+            Per_AIAN       0.1418805       0.0296005       4.7931854       0.0000017
+           Per_Asian      -0.2307601       0.0202114     -11.4173112       0.0000000
+           Per_Black       0.0001627       0.0000736       2.2111736       0.0270329
+        Per_Hispanic       0.0001517       0.0000684       2.2187768       0.0265110
+            Per_NHPI      -0.1309478       0.1034994      -1.2652034       0.2058103
+       Per_OtherRace      -0.5987335       0.2171172      -2.7576513       0.0058261
+     Per_TwoPlusRace       0.5022455       0.0473364      10.6101260       0.0000000
+           stutch_q2      -0.0116070       0.0028880      -4.0191031       0.0000586
+           stutch_q3      -0.0098638       0.0029216      -3.3762008       0.0007361
+           stutch_q4      -0.0100030       0.0029795      -3.3572979       0.0007883
+              suburb       0.0241485       0.0031976       7.5520076       0.0000000
+                town       0.0350176       0.0037107       9.4368997       0.0000000
+               rural       0.0993623       0.0033111      30.0088300       0.0000000
+       per_bach_plus      -0.0029655       0.0100731      -0.2943949       0.7684586
+       per_broadband      -0.0125678       0.0135366      -0.9284305       0.3531933
+MedianHouseholdIncome_10K      -0.0059203       0.0006331      -9.3512881       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER           35.771
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2     2899227.910           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               16       12240.170           0.0000
+Koenker-Bassett test             16         452.007           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_per_change_1 without housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :per_change_1                Number of Observations:       24754
+Mean dependent var  :      0.2543                Number of Variables   :          17
+S.D. dependent var  :      0.1093                Degrees of Freedom    :       24737
+R-squared           :      0.1023
+Adjusted R-squared  :      0.1017
+Sum squared residual:     265.671                F-statistic           :    176.1373
+Sigma-square        :       0.011                Prob(F-statistic)     :           0
+S.E. of regression  :       0.104                Log likelihood        :   20998.903
+Sigma-square ML     :       0.011                Akaike info criterion :  -41963.805
+S.E of regression ML:      0.1036                Schwarz criterion     :  -41825.820
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.2729506       0.0065032      41.9720176       0.0000000
+            Per_AIAN       0.1052755       0.0192599       5.4660319       0.0000000
+           Per_Asian      -0.1814265       0.0131508     -13.7958063       0.0000000
+           Per_Black       0.0001108       0.0000479       2.3146796       0.0206386
+        Per_Hispanic       0.0001266       0.0000445       2.8466799       0.0044214
+            Per_NHPI      -0.0411712       0.0673433      -0.6113624       0.5409653
+       Per_OtherRace      -0.3991756       0.1412703      -2.8256160       0.0047228
+     Per_TwoPlusRace       0.3391456       0.0308001      11.0111849       0.0000000
+           stutch_q2      -0.0065278       0.0018791      -3.4739035       0.0005138
+           stutch_q3      -0.0045128       0.0019010      -2.3739447       0.0176068
+           stutch_q4      -0.0042774       0.0019386      -2.2063821       0.0273664
+              suburb       0.0169335       0.0020806       8.1388349       0.0000000
+                town       0.0243994       0.0024144      10.1056833       0.0000000
+               rural       0.0644201       0.0021544      29.9014778       0.0000000
+       per_bach_plus      -0.0037277       0.0065542      -0.5687429       0.5695358
+       per_broadband      -0.0057650       0.0088078      -0.6545394       0.5127705
+MedianHouseholdIncome_10K      -0.0044145       0.0004119     -10.7166292       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER           35.771
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2      208436.385           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               16        5333.796           0.0000
+Koenker-Bassett test             16         680.168           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_per_change_1 with housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :per_change_1                Number of Observations:       24754
+Mean dependent var  :      0.2543                Number of Variables   :          32
+S.D. dependent var  :      0.1093                Degrees of Freedom    :       24722
+R-squared           :      0.1460
+Adjusted R-squared  :      0.1449
+Sum squared residual:     252.730                F-statistic           :    136.3426
+Sigma-square        :       0.010                Prob(F-statistic)     :           0
+S.E. of regression  :       0.101                Log likelihood        :   21616.985
+Sigma-square ML     :       0.010                Akaike info criterion :  -43169.969
+S.E of regression ML:      0.1010                Schwarz criterion     :  -42910.233
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.2610440       0.0299617       8.7125981       0.0000000
+            Per_AIAN       0.0872733       0.0189552       4.6041935       0.0000042
+           Per_Asian      -0.1423565       0.0133984     -10.6249147       0.0000000
+           Per_Black       0.0001859       0.0000482       3.8595477       0.0001139
+        Per_Hispanic       0.0001968       0.0000476       4.1325392       0.0000360
+            Per_NHPI      -0.0840486       0.0659944      -1.2735716       0.2028273
+       Per_OtherRace      -0.2337979       0.1382362      -1.6912933       0.0907934
+     Per_TwoPlusRace       0.3561883       0.0301573      11.8110095       0.0000000
+           stutch_q2      -0.0092016       0.0018482      -4.9786464       0.0000006
+           stutch_q3      -0.0098600       0.0018970      -5.1977439       0.0000002
+           stutch_q4      -0.0083146       0.0019308      -4.3063453       0.0000167
+              suburb       0.0145909       0.0020399       7.1528955       0.0000000
+                town       0.0219620       0.0023657       9.2835105       0.0000000
+               rural       0.0588965       0.0021396      27.5266662       0.0000000
+       per_bach_plus       0.0295745       0.0073972       3.9980508       0.0000641
+       per_broadband      -0.0264114       0.0087386      -3.0223785       0.0025105
+MedianHouseholdIncome_10K      -0.0074363       0.0004980     -14.9319863       0.0000000
+   units_median_room      -0.0118345       0.0020132      -5.8785080       0.0000000
+        per_none_bed       0.0007134       0.0326225       0.0218670       0.9825542
+           per_2_bed       0.2414358       0.0165932      14.5503015       0.0000000
+           per_3_bed       0.1646967       0.0144108      11.4286758       0.0000000
+           per_4_bed       0.1967824       0.0197892       9.9439238       0.0000000
+       per_5plus_bed       0.4910750       0.0262248      18.7256255       0.0000000
+ per_built_2010_2013      -0.1825405       0.0444587      -4.1058404       0.0000404
+ per_built_2000_2009       0.0009153       0.0287422       0.0318456       0.9745955
+ per_built_1990_1999      -0.0758599       0.0277472      -2.7339627       0.0062622
+ per_built_1980_1989      -0.0284689       0.0276070      -1.0312210       0.3024473
+ per_built_1970_1979      -0.1100971       0.0274749      -4.0071848       0.0000616
+ per_built_1960_1969      -0.1561564       0.0287044      -5.4401475       0.0000001
+ per_built_1950_1959      -0.1344520       0.0281531      -4.7757450       0.0000018
+ per_built_1940_1949      -0.0433348       0.0312217      -1.3879690       0.1651590
+per_built_1939earlier      -0.0875321       0.0264870      -3.3047240       0.0009521
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER          199.223
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2      258427.849           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               31        9602.754           0.0000
+Koenker-Bassett test             31        1111.728           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_per_change_1 with housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  :per_change_1                Number of Observations:       24754
+Mean dependent var  :      0.2543                Number of Variables   :          32
+S.D. dependent var  :      0.1093                Degrees of Freedom    :       24722
+R-squared           :      0.1460
+Adjusted R-squared  :      0.1449
+Sum squared residual:     252.730                F-statistic           :    136.3426
+Sigma-square        :       0.010                Prob(F-statistic)     :           0
+S.E. of regression  :       0.101                Log likelihood        :   21616.985
+Sigma-square ML     :       0.010                Akaike info criterion :  -43169.969
+S.E of regression ML:      0.1010                Schwarz criterion     :  -42910.233
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.2610440       0.0299617       8.7125981       0.0000000
+            Per_AIAN       0.0872733       0.0189552       4.6041935       0.0000042
+           Per_Asian      -0.1423565       0.0133984     -10.6249147       0.0000000
+           Per_Black       0.0001859       0.0000482       3.8595477       0.0001139
+        Per_Hispanic       0.0001968       0.0000476       4.1325392       0.0000360
+            Per_NHPI      -0.0840486       0.0659944      -1.2735716       0.2028273
+       Per_OtherRace      -0.2337979       0.1382362      -1.6912933       0.0907934
+     Per_TwoPlusRace       0.3561883       0.0301573      11.8110095       0.0000000
+           stutch_q2      -0.0092016       0.0018482      -4.9786464       0.0000006
+           stutch_q3      -0.0098600       0.0018970      -5.1977439       0.0000002
+           stutch_q4      -0.0083146       0.0019308      -4.3063453       0.0000167
+              suburb       0.0145909       0.0020399       7.1528955       0.0000000
+                town       0.0219620       0.0023657       9.2835105       0.0000000
+               rural       0.0588965       0.0021396      27.5266662       0.0000000
+       per_bach_plus       0.0295745       0.0073972       3.9980508       0.0000641
+       per_broadband      -0.0264114       0.0087386      -3.0223785       0.0025105
+MedianHouseholdIncome_10K      -0.0074363       0.0004980     -14.9319863       0.0000000
+   units_median_room      -0.0118345       0.0020132      -5.8785080       0.0000000
+        per_none_bed       0.0007134       0.0326225       0.0218670       0.9825542
+           per_2_bed       0.2414358       0.0165932      14.5503015       0.0000000
+           per_3_bed       0.1646967       0.0144108      11.4286758       0.0000000
+           per_4_bed       0.1967824       0.0197892       9.9439238       0.0000000
+       per_5plus_bed       0.4910750       0.0262248      18.7256255       0.0000000
+ per_built_2010_2013      -0.1825405       0.0444587      -4.1058404       0.0000404
+ per_built_2000_2009       0.0009153       0.0287422       0.0318456       0.9745955
+ per_built_1990_1999      -0.0758599       0.0277472      -2.7339627       0.0062622
+ per_built_1980_1989      -0.0284689       0.0276070      -1.0312210       0.3024473
+ per_built_1970_1979      -0.1100971       0.0274749      -4.0071848       0.0000616
+ per_built_1960_1969      -0.1561564       0.0287044      -5.4401475       0.0000001
+ per_built_1950_1959      -0.1344520       0.0281531      -4.7757450       0.0000018
+ per_built_1940_1949      -0.0433348       0.0312217      -1.3879690       0.1651590
+per_built_1939earlier      -0.0875321       0.0264870      -3.3047240       0.0009521
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER          199.223
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2      258427.849           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               31        9602.754           0.0000
+Koenker-Bassett test             31        1111.728           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+02/28/2022 without housing controls and temporal lag
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  : temporallag                Number of Observations:       24754
+Mean dependent var  : 301714.4946                Number of Variables   :          18
+S.D. dependent var  : 285597.3891                Degrees of Freedom    :       24736
+R-squared           :      0.9831
+Adjusted R-squared  :      0.9830
+Sum squared residual:34210602791446.547                F-statistic           :  84417.8416
+Sigma-square        :1383028896.808                Prob(F-statistic)     :           0
+S.E. of regression  :   37189.096                Log likelihood        : -295620.826
+Sigma-square ML     :1382023220.144                Akaike info criterion :  591277.652
+S.E of regression ML:  37175.5729                Schwarz criterion     :  591423.753
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT    -9029.7411503    2333.8069770      -3.8691037       0.0001095
+            Per_AIAN    20409.2602682    6911.5010013       2.9529418       0.0031506
+           Per_Asian    -183554.0674415    4862.4194940     -37.7495335       0.0000000
+           Per_Black     -54.6843221      17.1924566      -3.1807160       0.0014709
+        Per_Hispanic     -50.1891333      16.3056078      -3.0780290       0.0020860
+            Per_NHPI    90600.4950502    24186.2887319       3.7459445       0.0001801
+       Per_OtherRace    -358314.6995822    50765.6136782      -7.0582166       0.0000000
+     Per_TwoPlusRace    31979.0689754    11061.0667038       2.8911379       0.0038418
+           stutch_q2    -507.3725437     674.4486456      -0.7522775       0.4518914
+           stutch_q3    1469.5010015     682.2506378       2.1539020       0.0312575
+           stutch_q4    1754.5293069     701.0780672       2.5026162       0.0123343
+              suburb    6383.5847415     746.6235738       8.5499373       0.0000000
+                town    7256.4315412     866.4374688       8.3750205       0.0000000
+               rural    13913.0223847     773.1871397      17.9943789       0.0000000
+       per_bach_plus    -10348.7639010    2456.5852447      -4.2126622       0.0000253
+       per_broadband    33070.0580899    3174.5546641      10.4172275       0.0000000
+MedianHouseholdIncome_10K    -3843.9095464     159.0163730     -24.1730425       0.0000000
+          02/29/2020       1.3249287       0.0016626     796.8899898       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER           37.700
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2     5478391.831           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               17      165424.675           0.0000
+Koenker-Bassett test             17        4423.780           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_02/28/2022 without housing controls and temporal lag
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  : temporallag                Number of Observations:       24754
+Mean dependent var  :     12.3495                Number of Variables   :          18
+S.D. dependent var  :      0.7082                Degrees of Freedom    :       24736
+R-squared           :      0.9788
+Adjusted R-squared  :      0.9788
+Sum squared residual:     263.561                F-statistic           :  67075.1810
+Sigma-square        :       0.011                Prob(F-statistic)     :           0
+S.E. of regression  :       0.103                Log likelihood        :   21097.607
+Sigma-square ML     :       0.011                Akaike info criterion :  -42159.213
+S.E of regression ML:      0.1032                Schwarz criterion     :  -42013.112
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.5015745       0.0174891      28.6791938       0.0000000
+            Per_AIAN       0.1108338       0.0191878       5.7762800       0.0000000
+           Per_Asian      -0.1588315       0.0131968     -12.0356072       0.0000000
+           Per_Black       0.0000131       0.0000482       0.2713395       0.7861322
+        Per_Hispanic       0.0003141       0.0000463       6.7880768       0.0000000
+            Per_NHPI       0.0395551       0.0673215       0.5875557       0.5568359
+       Per_OtherRace      -0.2511116       0.1411037      -1.7796239       0.0751498
+     Per_TwoPlusRace       0.3434639       0.0306797      11.1951588       0.0000000
+           stutch_q2      -0.0070429       0.0018720      -3.7622134       0.0001688
+           stutch_q3      -0.0048995       0.0018936      -2.5873375       0.0096777
+           stutch_q4      -0.0015082       0.0019410      -0.7770363       0.4371448
+              suburb       0.0146674       0.0020786       7.0564094       0.0000000
+                town       0.0203346       0.0024221       8.3952670       0.0000000
+               rural       0.0615874       0.0021553      28.5748065       0.0000000
+       per_bach_plus       0.0289594       0.0069291       4.1793749       0.0000293
+       per_broadband       0.0116790       0.0088600       1.3181724       0.1874582
+MedianHouseholdIncome_10K      -0.0027000       0.0004280      -6.3082219       0.0000000
+       ln_02/29/2020       0.9782122       0.0015482     631.8456811       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER          103.686
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2      160637.405           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               17       11685.544           0.0000
+Koenker-Bassett test             17        1669.084           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+02/28/2022 with housing controls and temporal lag
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  : temporallag                Number of Observations:       24754
+Mean dependent var  : 301714.4946                Number of Variables   :          33
+S.D. dependent var  : 285597.3891                Degrees of Freedom    :       24721
+R-squared           :      0.9848
+Adjusted R-squared  :      0.9848
+Sum squared residual:30635662785413.363                F-statistic           :  50140.0462
+Sigma-square        :1239256615.243                Prob(F-statistic)     :           0
+S.E. of regression  :   35203.077                Log likelihood        : -294254.766
+Sigma-square ML     :1237604540.091                Akaike info criterion :  588575.532
+S.E of regression ML:  35179.6040                Schwarz criterion     :  588843.384
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT    2345.7600958    10431.9126951       0.2248639       0.8220870
+            Per_AIAN    1590.4229512    6601.1744129       0.2409303       0.8096111
+           Per_Asian    -162576.4154421    4732.4710048     -34.3533886       0.0000000
+           Per_Black     -66.7524063      16.7842144      -3.9770945       0.0000700
+        Per_Hispanic     -33.4942872      16.6922117      -2.0065817       0.0448051
+            Per_NHPI    53969.4901202    22983.9743881       2.3481357       0.0188755
+       Per_OtherRace    -227017.8019630    48166.4601507      -4.7131926       0.0000025
+     Per_TwoPlusRace    39458.1793039    10503.0373113       3.7568351       0.0001725
+           stutch_q2    -3062.3052716     643.5023279      -4.7588099       0.0000020
+           stutch_q3    -3230.0318101     660.5166805      -4.8901593       0.0000010
+           stutch_q4    -2660.3183648     678.3023153      -3.9220246       0.0000880
+              suburb    5566.6927940     710.2227924       7.8379529       0.0000000
+                town    6602.4651428     823.7262302       8.0153635       0.0000000
+               rural    13007.9438213     744.9585009      17.4612999       0.0000000
+       per_bach_plus    13959.3666439    2626.0534037       5.3157208       0.0000001
+       per_broadband    17050.9999082    3049.4514389       5.5914974       0.0000000
+MedianHouseholdIncome_10K    -6653.1331641     193.5270459     -34.3783120       0.0000000
+   units_median_room    -4810.2417563     716.8788153      -6.7099789       0.0000000
+        per_none_bed    -79081.0693852    11374.8071164      -6.9522998       0.0000000
+           per_2_bed    85686.3771843    5779.4515598      14.8260395       0.0000000
+           per_3_bed    71287.6356032    5025.4034326      14.1854553       0.0000000
+           per_4_bed    109925.6179390    6892.7723025      15.9479543       0.0000000
+       per_5plus_bed    180764.2142373    9249.7764739      19.5425495       0.0000000
+ per_built_2010_2013    -63021.9221385    15480.7489127      -4.0709866       0.0000470
+ per_built_2000_2009    -6993.3637304    10012.4240967      -0.6984686       0.4848908
+ per_built_1990_1999    -35227.2227157    9667.2338058      -3.6439817       0.0002690
+ per_built_1980_1989    -14796.5477825    9619.4958971      -1.5381833       0.1240166
+ per_built_1970_1979    -32802.5909152    9577.1669404      -3.4250829       0.0006156
+ per_built_1960_1969    -57935.3044553    10002.0395986      -5.7923490       0.0000000
+ per_built_1950_1959    -47220.6831393    9807.2234688      -4.8148881       0.0000015
+ per_built_1940_1949    -47491.8120522    10882.9847788      -4.3638591       0.0000128
+per_built_1939earlier    -60794.5876409    9228.9157320      -6.5874030       0.0000000
+          02/29/2020       1.3325991       0.0016739     796.1070264       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER          202.896
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2     6638396.131           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               32      173709.928           0.0000
+Koenker-Bassett test             32        4232.944           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+ln_02/28/2022 with housing controls and temporal lag
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: ORDINARY LEAST SQUARES
+-----------------------------------------
+Data set            :     unknown
+Weights matrix      :        None
+Dependent Variable  : temporallag                Number of Observations:       24754
+Mean dependent var  :     12.3495                Number of Variables   :          33
+S.D. dependent var  :      0.7082                Degrees of Freedom    :       24721
+R-squared           :      0.9799
+Adjusted R-squared  :      0.9799
+Sum squared residual:     249.168                F-statistic           :  37713.8052
+Sigma-square        :       0.010                Prob(F-statistic)     :           0
+S.E. of regression  :       0.100                Log likelihood        :   21792.666
+Sigma-square ML     :       0.010                Akaike info criterion :  -43519.331
+S.E of regression ML:      0.1003                Schwarz criterion     :  -43251.479
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     t-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.6070591       0.0349839      17.3525238       0.0000000
+            Per_AIAN       0.0828330       0.0188230       4.4006314       0.0000108
+           Per_Asian      -0.1265460       0.0133304      -9.4930056       0.0000000
+           Per_Black       0.0000465       0.0000484       0.9609641       0.3365796
+        Per_Hispanic       0.0003786       0.0000483       7.8435341       0.0000000
+            Per_NHPI      -0.0024920       0.0656725      -0.0379458       0.9697312
+       Per_OtherRace      -0.0330575       0.1376761      -0.2401106       0.8102465
+     Per_TwoPlusRace       0.3526631       0.0299452      11.7769382       0.0000000
+           stutch_q2      -0.0101588       0.0018359      -5.5334926       0.0000000
+           stutch_q3      -0.0109160       0.0018844      -5.7927215       0.0000000
+           stutch_q4      -0.0054015       0.0019234      -2.8083114       0.0049841
+              suburb       0.0116070       0.0020317       5.7130147       0.0000000
+                town       0.0165668       0.0023665       7.0005846       0.0000000
+               rural       0.0550805       0.0021342      25.8084334       0.0000000
+       per_bach_plus       0.0634237       0.0075625       8.3865614       0.0000000
+       per_broadband      -0.0022484       0.0087717      -0.2563290       0.7976989
+MedianHouseholdIncome_10K      -0.0040394       0.0005265      -7.6724328       0.0000000
+   units_median_room      -0.0181773       0.0020273      -8.9664031       0.0000000
+        per_none_bed       0.0109479       0.0323970       0.3379299       0.7354189
+           per_2_bed       0.2230567       0.0165052      13.5143702       0.0000000
+           per_3_bed       0.1574746       0.0143144      11.0011600       0.0000000
+           per_4_bed       0.1949594       0.0196499       9.9216511       0.0000000
+       per_5plus_bed       0.5276064       0.0261122      20.2053326       0.0000000
+ per_built_2010_2013      -0.2019889       0.0441573      -4.5742976       0.0000048
+ per_built_2000_2009       0.0262043       0.0285712       0.9171592       0.3590682
+ per_built_1990_1999      -0.0571344       0.0275696      -2.0723713       0.0382412
+ per_built_1980_1989      -0.0061549       0.0274380      -0.2243188       0.8225111
+ per_built_1970_1979      -0.0925692       0.0272971      -3.3911746       0.0006970
+ per_built_1960_1969      -0.1464665       0.0285067      -5.1379712       0.0000003
+ per_built_1950_1959      -0.1217509       0.0279627      -4.3540417       0.0000134
+ per_built_1940_1949      -0.0494018       0.0310032      -1.5934424       0.1110738
+per_built_1939earlier      -0.0815833       0.0263021      -3.1017831       0.0019258
+       ln_02/29/2020       0.9696589       0.0016140     600.7844718       0.0000000
+------------------------------------------------------------------------------------
+
+REGRESSION DIAGNOSTICS
+MULTICOLLINEARITY CONDITION NUMBER          245.558
+
+TEST ON NORMALITY OF ERRORS
+TEST                             DF        VALUE           PROB
+Jarque-Bera                       2      194383.538           0.0000
+
+DIAGNOSTICS FOR HETEROSKEDASTICITY
+RANDOM COEFFICIENTS
+TEST                             DF        VALUE           PROB
+Breusch-Pagan test               32       14574.605           0.0000
+Koenker-Bassett test             32        1911.607           0.0000
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+Spatial Reg per_change_1 without housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: SPATIAL TWO STAGE LEAST SQUARES
+--------------------------------------------------
+Data set            :     unknown
+Weights matrix      :     unknown
+Dependent Variable  :per_change_1                Number of Observations:       24754
+Mean dependent var  :      1.2981                Number of Variables   :          18
+S.D. dependent var  :      0.1671                Degrees of Freedom    :       24736
+Pseudo R-squared    :      0.5380
+Spatial Pseudo R-squared:  0.0768
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     z-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.2499464       0.0327889       7.6229006       0.0000000
+            Per_AIAN       0.0340812       0.0213970       1.5928006       0.1112049
+           Per_Asian      -0.0546449       0.0153658      -3.5562588       0.0003762
+           Per_Black       0.0003160       0.0000528       5.9866144       0.0000000
+        Per_Hispanic       0.0000108       0.0000490       0.2210134       0.8250820
+            Per_NHPI      -0.0238748       0.0740391      -0.3224625       0.7471024
+       Per_OtherRace       0.0132584       0.1562372       0.0848608       0.9323721
+     Per_TwoPlusRace       0.1505629       0.0354120       4.2517520       0.0000212
+           stutch_q2      -0.0094920       0.0020650      -4.5966912       0.0000043
+           stutch_q3      -0.0100086       0.0020880      -4.7932641       0.0000016
+           stutch_q4      -0.0092526       0.0021295      -4.3448546       0.0000139
+              suburb       0.0007480       0.0023890       0.3131068       0.7541995
+                town      -0.0044230       0.0029000      -1.5251837       0.1272133
+               rural       0.0281287       0.0031766       8.8549690       0.0000000
+       per_bach_plus      -0.0310004       0.0072474      -4.2774784       0.0000189
+       per_broadband      -0.0319697       0.0096917      -3.2986552       0.0009715
+MedianHouseholdIncome_10K       0.0011945       0.0004995       2.3912026       0.0167933
+      W_per_change_1       0.8271685       0.0246078      33.6140517       0.0000000
+------------------------------------------------------------------------------------
+Instrumented: W_per_change_1
+Instruments: W_MedianHouseholdIncome_10K, W_Per_AIAN, W_Per_Asian,
+             W_Per_Black, W_Per_Hispanic, W_Per_NHPI, W_Per_OtherRace,
+             W_Per_TwoPlusRace, W_per_bach_plus, W_per_broadband, W_rural,
+             W_stutch_q2, W_stutch_q3, W_stutch_q4, W_suburb, W_town
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+Spatial Reg ln_per_change_1 without housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: SPATIAL TWO STAGE LEAST SQUARES
+--------------------------------------------------
+Data set            :     unknown
+Weights matrix      :     unknown
+Dependent Variable  :per_change_1                Number of Observations:       24754
+Mean dependent var  :      0.2543                Number of Variables   :          18
+S.D. dependent var  :      0.1093                Degrees of Freedom    :       24736
+Pseudo R-squared    :      0.5962
+Spatial Pseudo R-squared:  0.0716
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     z-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.0554469       0.0071638       7.7398644       0.0000000
+            Per_AIAN       0.0235948       0.0131292       1.7971207       0.0723165
+           Per_Asian      -0.0389902       0.0095944      -4.0638301       0.0000483
+           Per_Black       0.0002322       0.0000324       7.1750203       0.0000000
+        Per_Hispanic       0.0000133       0.0000301       0.4409236       0.6592683
+            Per_NHPI      -0.0040777       0.0453089      -0.0899979       0.9282889
+       Per_OtherRace       0.0381235       0.0957078       0.3983327       0.6903850
+     Per_TwoPlusRace       0.0905496       0.0217087       4.1711167       0.0000303
+           stutch_q2      -0.0051644       0.0012645      -4.0842409       0.0000442
+           stutch_q3      -0.0058931       0.0012792      -4.6069127       0.0000041
+           stutch_q4      -0.0054429       0.0013044      -4.1727936       0.0000301
+              suburb       0.0001134       0.0014667       0.0772914       0.9383917
+                town      -0.0025767       0.0017699      -1.4558161       0.1454435
+               rural       0.0167739       0.0019091       8.7864217       0.0000000
+       per_bach_plus      -0.0221961       0.0044349      -5.0048373       0.0000006
+       per_broadband      -0.0226771       0.0059410      -3.8170788       0.0001350
+MedianHouseholdIncome_10K       0.0009572       0.0003105       3.0828927       0.0020500
+      W_per_change_1       0.8499072       0.0221683      38.3387898       0.0000000
+------------------------------------------------------------------------------------
+Instrumented: W_per_change_1
+Instruments: W_MedianHouseholdIncome_10K, W_Per_AIAN, W_Per_Asian,
+             W_Per_Black, W_Per_Hispanic, W_Per_NHPI, W_Per_OtherRace,
+             W_Per_TwoPlusRace, W_per_bach_plus, W_per_broadband, W_rural,
+             W_stutch_q2, W_stutch_q3, W_stutch_q4, W_suburb, W_town
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+Spatial Reg ln_per_change_1 with housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: SPATIAL TWO STAGE LEAST SQUARES
+--------------------------------------------------
+Data set            :     unknown
+Weights matrix      :     unknown
+Dependent Variable  :per_change_1                Number of Observations:       24754
+Mean dependent var  :      0.2543                Number of Variables   :          33
+S.D. dependent var  :      0.1093                Degrees of Freedom    :       24721
+Pseudo R-squared    :      0.6003
+Spatial Pseudo R-squared:  0.1261
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     z-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.0324303       0.0210117       1.5434384       0.1227245
+            Per_AIAN       0.0259335       0.0130432       1.9882697       0.0467819
+           Per_Asian      -0.0260923       0.0094584      -2.7586298       0.0058044
+           Per_Black       0.0002924       0.0000331       8.8410399       0.0000000
+        Per_Hispanic       0.0000707       0.0000327       2.1613266       0.0306701
+            Per_NHPI      -0.0057668       0.0452444      -0.1274588       0.8985773
+       Per_OtherRace       0.0608142       0.0948929       0.6408714       0.5216062
+     Per_TwoPlusRace       0.0989109       0.0212686       4.6505591       0.0000033
+           stutch_q2      -0.0051585       0.0012688      -4.0655735       0.0000479
+           stutch_q3      -0.0061477       0.0013018      -4.7224673       0.0000023
+           stutch_q4      -0.0051222       0.0013244      -3.8675465       0.0001099
+              suburb      -0.0010788       0.0014310      -0.7539292       0.4508918
+                town      -0.0037216       0.0016972      -2.1928269       0.0283199
+               rural       0.0140267       0.0017092       8.2067791       0.0000000
+       per_bach_plus      -0.0134386       0.0051380      -2.6155432       0.0089086
+       per_broadband      -0.0259462       0.0059876      -4.3333404       0.0000147
+MedianHouseholdIncome_10K       0.0002572       0.0003730       0.6894752       0.4905243
+   units_median_room      -0.0040273       0.0013879      -2.9018198       0.0037100
+        per_none_bed       0.0320125       0.0223609       1.4316290       0.1522500
+           per_2_bed       0.0971044       0.0117154       8.2886104       0.0000000
+           per_3_bed       0.0650774       0.0100649       6.4657601       0.0000000
+           per_4_bed       0.0696122       0.0137860       5.0494706       0.0000004
+       per_5plus_bed       0.1772361       0.0189906       9.3328137       0.0000000
+ per_built_2010_2013      -0.0069237       0.0306560      -0.2258525       0.8213161
+ per_built_2000_2009      -0.0044993       0.0196940      -0.2284590       0.8192894
+ per_built_1990_1999      -0.0231262       0.0190400      -1.2146096       0.2245150
+ per_built_1980_1989      -0.0079557       0.0189202      -0.4204868       0.6741299
+ per_built_1970_1979      -0.0365506       0.0188804      -1.9358989       0.0528801
+ per_built_1960_1969      -0.0536721       0.0197700      -2.7148288       0.0066310
+ per_built_1950_1959      -0.0551821       0.0193524      -2.8514285       0.0043523
+ per_built_1940_1949      -0.0126458       0.0214011      -0.5908968       0.5545896
+per_built_1939earlier      -0.0030095       0.0182238      -0.1651414       0.8688327
+      W_per_change_1       0.8455105       0.0165562      51.0690760       0.0000000
+------------------------------------------------------------------------------------
+Instrumented: W_per_change_1
+Instruments: W_MedianHouseholdIncome_10K, W_Per_AIAN, W_Per_Asian,
+             W_Per_Black, W_Per_Hispanic, W_Per_NHPI, W_Per_OtherRace,
+             W_Per_TwoPlusRace, W_per_2_bed, W_per_3_bed, W_per_4_bed,
+             W_per_5plus_bed, W_per_bach_plus, W_per_broadband,
+             W_per_built_1939earlier, W_per_built_1940_1949,
+             W_per_built_1950_1959, W_per_built_1960_1969,
+             W_per_built_1970_1979, W_per_built_1980_1989,
+             W_per_built_1990_1999, W_per_built_2000_2009,
+             W_per_built_2010_2013, W_per_none_bed, W_rural, W_stutch_q2,
+             W_stutch_q3, W_stutch_q4, W_suburb, W_town, W_units_median_room
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+Spatial Reg ln_per_change_1 with housing controls
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: SPATIAL TWO STAGE LEAST SQUARES
+--------------------------------------------------
+Data set            :     unknown
+Weights matrix      :     unknown
+Dependent Variable  :per_change_1                Number of Observations:       24754
+Mean dependent var  :      0.2543                Number of Variables   :          33
+S.D. dependent var  :      0.1093                Degrees of Freedom    :       24721
+Pseudo R-squared    :      0.6003
+Spatial Pseudo R-squared:  0.1261
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     z-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.0324303       0.0210117       1.5434384       0.1227245
+            Per_AIAN       0.0259335       0.0130432       1.9882697       0.0467819
+           Per_Asian      -0.0260923       0.0094584      -2.7586298       0.0058044
+           Per_Black       0.0002924       0.0000331       8.8410399       0.0000000
+        Per_Hispanic       0.0000707       0.0000327       2.1613266       0.0306701
+            Per_NHPI      -0.0057668       0.0452444      -0.1274588       0.8985773
+       Per_OtherRace       0.0608142       0.0948929       0.6408714       0.5216062
+     Per_TwoPlusRace       0.0989109       0.0212686       4.6505591       0.0000033
+           stutch_q2      -0.0051585       0.0012688      -4.0655735       0.0000479
+           stutch_q3      -0.0061477       0.0013018      -4.7224673       0.0000023
+           stutch_q4      -0.0051222       0.0013244      -3.8675465       0.0001099
+              suburb      -0.0010788       0.0014310      -0.7539292       0.4508918
+                town      -0.0037216       0.0016972      -2.1928269       0.0283199
+               rural       0.0140267       0.0017092       8.2067791       0.0000000
+       per_bach_plus      -0.0134386       0.0051380      -2.6155432       0.0089086
+       per_broadband      -0.0259462       0.0059876      -4.3333404       0.0000147
+MedianHouseholdIncome_10K       0.0002572       0.0003730       0.6894752       0.4905243
+   units_median_room      -0.0040273       0.0013879      -2.9018198       0.0037100
+        per_none_bed       0.0320125       0.0223609       1.4316290       0.1522500
+           per_2_bed       0.0971044       0.0117154       8.2886104       0.0000000
+           per_3_bed       0.0650774       0.0100649       6.4657601       0.0000000
+           per_4_bed       0.0696122       0.0137860       5.0494706       0.0000004
+       per_5plus_bed       0.1772361       0.0189906       9.3328137       0.0000000
+ per_built_2010_2013      -0.0069237       0.0306560      -0.2258525       0.8213161
+ per_built_2000_2009      -0.0044993       0.0196940      -0.2284590       0.8192894
+ per_built_1990_1999      -0.0231262       0.0190400      -1.2146096       0.2245150
+ per_built_1980_1989      -0.0079557       0.0189202      -0.4204868       0.6741299
+ per_built_1970_1979      -0.0365506       0.0188804      -1.9358989       0.0528801
+ per_built_1960_1969      -0.0536721       0.0197700      -2.7148288       0.0066310
+ per_built_1950_1959      -0.0551821       0.0193524      -2.8514285       0.0043523
+ per_built_1940_1949      -0.0126458       0.0214011      -0.5908968       0.5545896
+per_built_1939earlier      -0.0030095       0.0182238      -0.1651414       0.8688327
+      W_per_change_1       0.8455105       0.0165562      51.0690760       0.0000000
+------------------------------------------------------------------------------------
+Instrumented: W_per_change_1
+Instruments: W_MedianHouseholdIncome_10K, W_Per_AIAN, W_Per_Asian,
+             W_Per_Black, W_Per_Hispanic, W_Per_NHPI, W_Per_OtherRace,
+             W_Per_TwoPlusRace, W_per_2_bed, W_per_3_bed, W_per_4_bed,
+             W_per_5plus_bed, W_per_bach_plus, W_per_broadband,
+             W_per_built_1939earlier, W_per_built_1940_1949,
+             W_per_built_1950_1959, W_per_built_1960_1969,
+             W_per_built_1970_1979, W_per_built_1980_1989,
+             W_per_built_1990_1999, W_per_built_2000_2009,
+             W_per_built_2010_2013, W_per_none_bed, W_rural, W_stutch_q2,
+             W_stutch_q3, W_stutch_q4, W_suburb, W_town, W_units_median_room
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+Spatial Reg 02/28/2022 without housing controls and temporal lag
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: SPATIAL TWO STAGE LEAST SQUARES
+--------------------------------------------------
+Data set            :     unknown
+Weights matrix      :     unknown
+Dependent Variable  : temporallag                Number of Observations:       24754
+Mean dependent var  : 301714.4946                Number of Variables   :          19
+S.D. dependent var  : 285597.3891                Degrees of Freedom    :       24735
+Pseudo R-squared    :      0.9825
+Spatial Pseudo R-squared:  0.9833
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     z-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT    -7929.8388849    2371.9758525      -3.3431364       0.0008284
+            Per_AIAN    21613.0753537    7022.7887223       3.0775631       0.0020870
+           Per_Asian    -175054.2898609    4960.0808117     -35.2926286       0.0000000
+           Per_Black     -55.7476730      17.4686850      -3.1912919       0.0014164
+        Per_Hispanic       0.3252977      16.7726806       0.0193945       0.9845264
+            Per_NHPI    117483.5642007    24614.1509742       4.7730090       0.0000018
+       Per_OtherRace    -330621.4610027    51600.9259935      -6.4072777       0.0000000
+     Per_TwoPlusRace    42236.9935732    11251.2700335       3.7539756       0.0001741
+           stutch_q2    -907.1103590     685.5939771      -1.3231014       0.1858017
+           stutch_q3     800.3697142     694.0740158       1.1531475       0.2488498
+           stutch_q4    1964.0918006     712.4212723       2.7569247       0.0058348
+              suburb    5937.2284280     758.9676333       7.8227689       0.0000000
+                town    6780.4300527     880.6989216       7.6989194       0.0000000
+               rural    13990.9467932     785.6162744      17.8088811       0.0000000
+       per_bach_plus    -9634.7159909    2496.3162028      -3.8595736       0.0001136
+       per_broadband    36727.8538319    3231.0988492      11.3669855       0.0000000
+MedianHouseholdIncome_10K    -4161.8176827     162.4067407     -25.6258925       0.0000000
+          02/29/2020       1.3672685       0.0027676     494.0284356       0.0000000
+       W_temporallag      -0.0427078       0.0022113     -19.3138472       0.0000000
+------------------------------------------------------------------------------------
+Instrumented: W_temporallag
+Instruments: W_02/29/2020, W_MedianHouseholdIncome_10K, W_Per_AIAN,
+             W_Per_Asian, W_Per_Black, W_Per_Hispanic, W_Per_NHPI,
+             W_Per_OtherRace, W_Per_TwoPlusRace, W_per_bach_plus,
+             W_per_broadband, W_rural, W_stutch_q2, W_stutch_q3,
+             W_stutch_q4, W_suburb, W_town
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+Spatial Reg ln_02/28/2022 without housing controls and temporal lag
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: SPATIAL TWO STAGE LEAST SQUARES
+--------------------------------------------------
+Data set            :     unknown
+Weights matrix      :     unknown
+Dependent Variable  : temporallag                Number of Observations:       24754
+Mean dependent var  :     12.3495                Number of Variables   :          19
+S.D. dependent var  :      0.7082                Degrees of Freedom    :       24735
+Pseudo R-squared    :      0.9799
+Spatial Pseudo R-squared:  0.9789
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     z-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.4093732       0.0180685      22.6567838       0.0000000
+            Per_AIAN       0.1028032       0.0186826       5.5026296       0.0000000
+           Per_Asian      -0.1748413       0.0128872     -13.5669990       0.0000000
+           Per_Black      -0.0000432       0.0000470      -0.9190451       0.3580720
+        Per_Hispanic       0.0001905       0.0000458       4.1632602       0.0000314
+            Per_NHPI       0.0166313       0.0655401       0.2537576       0.7996829
+       Per_OtherRace      -0.3071602       0.1373832      -2.2357924       0.0253654
+     Per_TwoPlusRace       0.3031517       0.0299773      10.1127005       0.0000000
+           stutch_q2      -0.0055266       0.0018247      -3.0287692       0.0024555
+           stutch_q3      -0.0026186       0.0018491      -1.4161426       0.1567338
+           stutch_q4      -0.0000019       0.0018917      -0.0009864       0.9992129
+              suburb       0.0158456       0.0020245       7.8268093       0.0000000
+                town       0.0208775       0.0023577       8.8550234       0.0000000
+               rural       0.0601794       0.0020998      28.6601440       0.0000000
+       per_bach_plus       0.0358704       0.0067593       5.3068357       0.0000001
+       per_broadband       0.0115339       0.0086233       1.3375211       0.1810526
+MedianHouseholdIncome_10K      -0.0024854       0.0004168      -5.9628969       0.0000000
+       ln_02/29/2020       0.9462295       0.0025864     365.8482836       0.0000000
+       W_temporallag       0.0386872       0.0025428      15.2144147       0.0000000
+------------------------------------------------------------------------------------
+Instrumented: W_temporallag
+Instruments: W_MedianHouseholdIncome_10K, W_Per_AIAN, W_Per_Asian,
+             W_Per_Black, W_Per_Hispanic, W_Per_NHPI, W_Per_OtherRace,
+             W_Per_TwoPlusRace, W_ln_02/29/2020, W_per_bach_plus,
+             W_per_broadband, W_rural, W_stutch_q2, W_stutch_q3,
+             W_stutch_q4, W_suburb, W_town
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+Spatial Reg 02/28/2022 with housing controls and temporal lag
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: SPATIAL TWO STAGE LEAST SQUARES
+--------------------------------------------------
+Data set            :     unknown
+Weights matrix      :     unknown
+Dependent Variable  : temporallag                Number of Observations:       24754
+Mean dependent var  : 301714.4946                Number of Variables   :          34
+S.D. dependent var  : 285597.3891                Degrees of Freedom    :       24720
+Pseudo R-squared    :      0.9846
+Spatial Pseudo R-squared:  0.9849
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     z-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT    4410.5341900    10518.2833380       0.4193207       0.6749818
+            Per_AIAN    1288.5940581    6654.8141231       0.1936334       0.8464630
+           Per_Asian    -159839.8109383    4777.4388608     -33.4572175       0.0000000
+           Per_Black     -66.4100411      16.9204828      -3.9248313       0.0000868
+        Per_Hispanic     -14.1614560      16.9202469      -0.8369533       0.4026188
+            Per_NHPI    66989.6532140    23201.0857414       2.8873499       0.0038850
+       Per_OtherRace    -215433.1559309    48568.9788793      -4.4356122       0.0000092
+     Per_TwoPlusRace    43978.8941015    10596.3527515       4.1503803       0.0000332
+           stutch_q2    -3240.5114524     648.9302083      -4.9936209       0.0000006
+           stutch_q3    -3508.1419532     666.3632923      -5.2646087       0.0000001
+           stutch_q4    -2469.6874188     684.0301741      -3.6104948       0.0003056
+              suburb    5352.9288207     716.2543492       7.4735027       0.0000000
+                town    6365.8169112     830.6942268       7.6632493       0.0000000
+               rural    13053.7391123     751.0170845      17.3814143       0.0000000
+       per_bach_plus    13202.0863541    2648.2742740       4.9851658       0.0000006
+       per_broadband    19065.3007857    3079.7134808       6.1906086       0.0000000
+MedianHouseholdIncome_10K    -6560.1559284     195.2829666     -33.5930780       0.0000000
+   units_median_room    -5633.2786821     726.6033187      -7.7528942       0.0000000
+        per_none_bed    -78813.6662766    11467.1638270      -6.8729869       0.0000000
+           per_2_bed    86937.0484189    5827.4855941      14.9184493       0.0000000
+           per_3_bed    71201.5311836    5066.2013424      14.0542245       0.0000000
+           per_4_bed    111412.6473974    6950.0511683      16.0304787       0.0000000
+       per_5plus_bed    180666.5301232    9324.8622819      19.3747130       0.0000000
+ per_built_2010_2013    -64870.3340292    15607.3226268      -4.1564037       0.0000323
+ per_built_2000_2009    -4936.0716922    10095.4478802      -0.4889403       0.6248839
+ per_built_1990_1999    -34023.4126132    9746.3251255      -3.4908965       0.0004814
+ per_built_1980_1989    -12154.6753147    9700.5849858      -1.2529837       0.2102116
+ per_built_1970_1979    -30682.3870102    9656.8509937      -3.1772663       0.0014867
+ per_built_1960_1969    -56174.2641452    10084.5122701      -5.5703501       0.0000000
+ per_built_1950_1959    -45830.1713338    9887.6469031      -4.6350938       0.0000036
+ per_built_1940_1949    -46204.8003760    10971.9540131      -4.2111734       0.0000254
+per_built_1939earlier    -59227.4920819    9304.9306717      -6.3651728       0.0000000
+          02/29/2020       1.3544190       0.0026127     518.4070965       0.0000000
+       W_temporallag      -0.0230707       0.0021089     -10.9395878       0.0000000
+------------------------------------------------------------------------------------
+Instrumented: W_temporallag
+Instruments: W_02/29/2020, W_MedianHouseholdIncome_10K, W_Per_AIAN,
+             W_Per_Asian, W_Per_Black, W_Per_Hispanic, W_Per_NHPI,
+             W_Per_OtherRace, W_Per_TwoPlusRace, W_per_2_bed, W_per_3_bed,
+             W_per_4_bed, W_per_5plus_bed, W_per_bach_plus, W_per_broadband,
+             W_per_built_1939earlier, W_per_built_1940_1949,
+             W_per_built_1950_1959, W_per_built_1960_1969,
+             W_per_built_1970_1979, W_per_built_1980_1989,
+             W_per_built_1990_1999, W_per_built_2000_2009,
+             W_per_built_2010_2013, W_per_none_bed, W_rural, W_stutch_q2,
+             W_stutch_q3, W_stutch_q4, W_suburb, W_town, W_units_median_room
+================================ END OF REPORT =====================================
+
+
+-------------------------------------------------------
+Spatial Reg ln_02/28/2022 with housing controls and temporal lag
+-------------------------------------------------------
+
+REGRESSION
+----------
+SUMMARY OF OUTPUT: SPATIAL TWO STAGE LEAST SQUARES
+--------------------------------------------------
+Data set            :     unknown
+Weights matrix      :     unknown
+Dependent Variable  : temporallag                Number of Observations:       24754
+Mean dependent var  :     12.3495                Number of Variables   :          34
+S.D. dependent var  :      0.7082                Degrees of Freedom    :       24720
+Pseudo R-squared    :      0.9813
+Spatial Pseudo R-squared:  0.9802
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     z-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       0.4713374       0.0344542      13.6801175       0.0000000
+            Per_AIAN       0.0721871       0.0181815       3.9703503       0.0000718
+           Per_Asian      -0.1379322       0.0128833     -10.7063146       0.0000000
+           Per_Black      -0.0000394       0.0000469      -0.8394867       0.4011962
+        Per_Hispanic       0.0002451       0.0000471       5.2046089       0.0000002
+            Per_NHPI      -0.0329130       0.0634255      -0.5189240       0.6038137
+       Per_OtherRace      -0.0802210       0.1329482      -0.6034000       0.5462426
+     Per_TwoPlusRace       0.3028652       0.0290197      10.4365491       0.0000000
+           stutch_q2      -0.0087425       0.0017740      -4.9282318       0.0000008
+           stutch_q3      -0.0089475       0.0018221      -4.9105313       0.0000009
+           stutch_q4      -0.0043107       0.0018579      -2.3202568       0.0203270
+              suburb       0.0131500       0.0019631       6.6985145       0.0000000
+                town       0.0175611       0.0022854       7.6840298       0.0000000
+               rural       0.0540708       0.0020612      26.2325680       0.0000000
+       per_bach_plus       0.0795934       0.0073464      10.8342728       0.0000000
+       per_broadband      -0.0048824       0.0084701      -0.5764239       0.5643287
+MedianHouseholdIncome_10K      -0.0047399       0.0005095      -9.3025265       0.0000000
+   units_median_room      -0.0155692       0.0019617      -7.9366107       0.0000000
+        per_none_bed       0.0181238       0.0312816       0.5793763       0.5623353
+           per_2_bed       0.2078614       0.0159540      13.0288024       0.0000000
+           per_3_bed       0.1625184       0.0138229      11.7571593       0.0000000
+           per_4_bed       0.1938774       0.0189722      10.2190298       0.0000000
+       per_5plus_bed       0.5093955       0.0252280      20.1916463       0.0000000
+ per_built_2010_2013      -0.1677283       0.0426687      -3.9309419       0.0000846
+ per_built_2000_2009       0.0232722       0.0275861       0.8436199       0.3988818
+ per_built_1990_1999      -0.0542001       0.0266190      -2.0361435       0.0417360
+ per_built_1980_1989      -0.0133127       0.0264940      -0.5024782       0.6153312
+ per_built_1970_1979      -0.0893524       0.0263560      -3.3902048       0.0006984
+ per_built_1960_1969      -0.1420909       0.0275243      -5.1623843       0.0000002
+ per_built_1950_1959      -0.1203590       0.0269983      -4.4580200       0.0000083
+ per_built_1940_1949      -0.0509219       0.0299339      -1.7011426       0.0889162
+per_built_1939earlier      -0.0854118       0.0253956      -3.3632557       0.0007703
+       ln_02/29/2020       0.9292357       0.0025546     363.7514029       0.0000000
+       W_temporallag       0.0499180       0.0024997      19.9695148       0.0000000
+------------------------------------------------------------------------------------
+Instrumented: W_temporallag
+Instruments: W_MedianHouseholdIncome_10K, W_Per_AIAN, W_Per_Asian,
+             W_Per_Black, W_Per_Hispanic, W_Per_NHPI, W_Per_OtherRace,
+             W_Per_TwoPlusRace, W_ln_02/29/2020, W_per_2_bed, W_per_3_bed,
+             W_per_4_bed, W_per_5plus_bed, W_per_bach_plus, W_per_broadband,
+             W_per_built_1939earlier, W_per_built_1940_1949,
+             W_per_built_1950_1959, W_per_built_1960_1969,
+             W_per_built_1970_1979, W_per_built_1980_1989,
+             W_per_built_1990_1999, W_per_built_2000_2009,
+             W_per_built_2010_2013, W_per_none_bed, W_rural, W_stutch_q2,
+             W_stutch_q3, W_stutch_q4, W_suburb, W_town, W_units_median_room
+================================ END OF REPORT =====================================
+REGRESSION
+----------
+SUMMARY OF OUTPUT: SPATIAL TWO STAGE LEAST SQUARES
+--------------------------------------------------
+Data set            :     unknown
+Weights matrix      :     unknown
+Dependent Variable  :ln_02/28/2022                Number of Observations:       24754
+Mean dependent var  :     12.3495                Number of Variables   :          33
+S.D. dependent var  :      0.7082                Degrees of Freedom    :       24721
+Pseudo R-squared    :      0.8762
+Spatial Pseudo R-squared:  0.7258
+
+------------------------------------------------------------------------------------
+            Variable     Coefficient       Std.Error     z-Statistic     Probability
+------------------------------------------------------------------------------------
+            CONSTANT       4.9610496       0.1018121      48.7275089       0.0000000
+            Per_AIAN      -0.1122160       0.0471098      -2.3820073       0.0172186
+           Per_Asian       0.0141514       0.0335105       0.4222968       0.6728084
+           Per_Black      -0.0032875       0.0001203     -27.3308922       0.0000000
+        Per_Hispanic       0.0019666       0.0001262      15.5856366       0.0000000
+            Per_NHPI       1.0413811       0.1648031       6.3189399       0.0000000
+       Per_OtherRace       2.8476610       0.3454840       8.2425265       0.0000000
+     Per_TwoPlusRace      -0.2667148       0.0751292      -3.5500801       0.0003851
+           stutch_q2      -0.0105107       0.0046038      -2.2830811       0.0224256
+           stutch_q3      -0.0067414       0.0047306      -1.4250654       0.1541383
+           stutch_q4       0.0563466       0.0048092      11.7163178       0.0000000
+              suburb      -0.0217534       0.0051099      -4.2571271       0.0000207
+                town      -0.0639275       0.0059557     -10.7337804       0.0000000
+               rural      -0.0210983       0.0053384      -3.9521843       0.0000774
+       per_bach_plus       0.8201955       0.0186889      43.8867238       0.0000000
+       per_broadband       0.3786910       0.0220917      17.1417380       0.0000000
+MedianHouseholdIncome_10K       0.0458041       0.0013790      33.2158908       0.0000000
+   units_median_room      -0.0966388       0.0051659     -18.7069684       0.0000000
+        per_none_bed       0.2654568       0.0810756       3.2741881       0.0010597
+           per_2_bed      -0.2599271       0.0412509      -6.3011307       0.0000000
+           per_3_bed       0.0914371       0.0358538       2.5502739       0.0107638
+           per_4_bed       0.1518302       0.0491796       3.0872615       0.0020201
+       per_5plus_bed       0.9436779       0.0656357      14.3775037       0.0000000
+ per_built_2010_2013      -0.1474974       0.1107087      -1.3323019       0.1827610
+ per_built_2000_2009       0.4229247       0.0715559       5.9104079       0.0000000
+ per_built_1990_1999       0.2939814       0.0690038       4.2603617       0.0000204
+ per_built_1980_1989       0.2925454       0.0687420       4.2557015       0.0000208
+ per_built_1970_1979       0.2413733       0.0683197       3.5329954       0.0004109
+ per_built_1960_1969       0.0673267       0.0713420       0.9437175       0.3453140
+ per_built_1950_1959       0.1096813       0.0699883       1.5671392       0.1170822
+ per_built_1940_1949      -0.1695598       0.0775946      -2.1852006       0.0288741
+per_built_1939earlier      -0.0235264       0.0658385      -0.3573344       0.7208415
+     W_ln_02/28/2022       0.5608342       0.0058087      96.5505324       0.0000000
+------------------------------------------------------------------------------------
+Instrumented: W_ln_02/28/2022
+Instruments: W_MedianHouseholdIncome_10K, W_Per_AIAN, W_Per_Asian,
+             W_Per_Black, W_Per_Hispanic, W_Per_NHPI, W_Per_OtherRace,
+             W_Per_TwoPlusRace, W_per_2_bed, W_per_3_bed, W_per_4_bed,
+             W_per_5plus_bed, W_per_bach_plus, W_per_broadband,
+             W_per_built_1939earlier, W_per_built_1940_1949,
+             W_per_built_1950_1959, W_per_built_1960_1969,
+             W_per_built_1970_1979, W_per_built_1980_1989,
+             W_per_built_1990_1999, W_per_built_2000_2009,
+             W_per_built_2010_2013, W_per_none_bed, W_rural, W_stutch_q2,
+             W_stutch_q3, W_stutch_q4, W_suburb, W_town, W_units_median_room
+================================ END OF REPORT =====================================
+01/31/2017
+02/28/2017
+03/31/2017
+04/30/2017
+05/31/2017
+06/30/2017
+07/31/2017
+08/31/2017
+09/30/2017
+10/31/2017
+11/30/2017
+12/31/2017
+01/31/2018
+02/28/2018
+03/31/2018
+04/30/2018
+05/31/2018
+06/30/2018
+07/31/2018
+08/31/2018
+09/30/2018
+10/31/2018
+11/30/2018
+12/31/2018
+01/31/2019
+02/28/2019
+03/31/2019
+04/30/2019
+05/31/2019
+06/30/2019
+07/31/2019
+08/31/2019
+09/30/2019
+10/31/2019
+11/30/2019
+12/31/2019
+01/31/2020
+02/29/2020
+03/31/2020
+04/30/2020
+05/31/2020
+06/30/2020
+07/31/2020
+08/31/2020
+09/30/2020
+10/31/2020
+11/30/2020
+12/31/2020
+01/31/2021
+02/28/2021
+03/31/2021
+04/30/2021
+05/31/2021
+06/30/2021
+07/31/2021
+08/31/2021
+09/30/2021
+10/31/2021
+11/30/2021
+12/31/2021
+01/31/2022
+02/28/2022
+03/31/2022
+04/30/2022
+05/31/2022
+06/30/2022
+07/31/2022
+08/31/2022
+09/30/2022
+10/31/2022
+11/30/2022
+12/31/2022
+01/31/2023
+02/28/2023
