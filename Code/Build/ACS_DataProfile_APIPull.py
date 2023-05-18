@@ -4,10 +4,14 @@ Created on Wed May 11 10:07:27 2022
 
 @author: Trevor Gratz trevormgratz@gmail.com
 
-This file pulls creates a function to easily make api calls to the American 
-Community Survey's Data Profile tables. 
+This function makes api calls to the American Community Survey's Data 
+Profile tables. You can find out more information about the variables
+availalbe in the data profiles at the link below.
+
+https://api.census.gov/data/2020/acs/acs5/profile/variables.html
 
 NOTE: The zip code geography doesn't allow for subsetting in its current form.
+      If you plan on making many calls, you will need a Census API key.
 
 """
 
@@ -99,7 +103,9 @@ def dppull(geography='county', year='2020', acsversion='5', variables=[],
     # Data Profile is handled differntly than other ACS API
     profile = r'/profile'
 
-    # Currently supports pulling states, counties, and tracts
+    # Currently supports pulling states, counties, tracts, and zip codes 
+    # (Main geos for Data Profiles)
+    
     if geography == 'state':
         geo = f'for=state:{state}'
 
@@ -120,7 +126,7 @@ def dppull(geography='county', year='2020', acsversion='5', variables=[],
     else:
         apicall = f'https://api.census.gov/data/{year}/acs/acs{acsversion}{profile}?get=group({table})&{geo}'
 
-    # Try three times incase there is a browser connection issue
+    # Try three times in case there is a browser connection issue
     counter = 0
     success = False
     while ((counter < 3) & (success == False)):

@@ -2,7 +2,13 @@
 """
 Created on Fri Apr  7 10:59:50 2023
 
-@author: trevo
+@author: Trevor Gratz trevormgratz@gmail.com
+
+This file combines features from the American Communities Survey, the
+Rural-Urban Commuting Areas, and the Zillow Home Value Index (ZHVI), and runs
+spatial lag regressions to predict the ZHVI. Regressions are run each month
+and the coefficients of urbanicity are plotted to determine how their 
+relationship to the ZHVI has changed over time.
 """
 
 import geopandas as gpd
@@ -12,19 +18,15 @@ import datetime
 import pysal.model.spreg.diagnostics as D
 from matplotlib import pyplot as plt
 from pysal.lib import weights
-import seaborn
 import numpy as np
-from pysal.explore import esda
-import scipy
+import sys
 
 today = datetime.date.today()
 
-
-# import sys
-# old_stdout = sys.stdout
-# logpath = r'..\..\LogsOutput\\' + f'coeffient_plot_log_{today}.log'
-# log_file = open(logpath,"w")
-# sys.stdout = log_file
+old_stdout = sys.stdout
+logpath = r'..\..\LogsOutput\\' + f'coeffient_plot_log_{today}.log'
+log_file = open(logpath,"w")
+sys.stdout = log_file
 
 #############
 # Features
@@ -37,11 +39,12 @@ zillow = zillow.rename(columns={'RegionName': 'ZCTA5CE10'})
 # Convert datetime columns to strings
 zillow.columns = [i if type(i) != datetime.datetime else i.strftime('%m/%d/%Y')
                   for i in zillow.columns]
-
+# Get columns for January 2017 through the end of the series
+# (At time of writing February, 2023)
 ys = list(zillow.columns[213:])
 
 ################
-# Zip Shape
+# Zip Code Shapefile
 zdf = gpd.read_file(r'..\..\..\Data\Geographic\zipcode\tl_2019_us_zcta510\tl_2019_us_zcta510.shp')
 zdf['ZCTA5CE10'] = zdf['ZCTA5CE10'].astype(int)
 
@@ -56,48 +59,51 @@ housecontrols = ['units_median_room', 'per_none_bed', 'per_2_bed', 'per_3_bed',
                      'per_built_1940_1949', 'per_built_1939earlier']
 
 variable_names = ['Per_AIAN', 'Per_Asian','Per_Black', 'Per_Hispanic',
-                      'Per_NHPI', 'Per_OtherRace', 'Per_TwoPlusRace',
-                      'stutch_q2', 'stutch_q3', 'stutch_q4',
-                      'suburb', 'town', 'rural', 'per_bach_plus', 'per_broadband',
-                      'MedianHouseholdIncome_10K']
+                  'Per_NHPI', 'Per_OtherRace', 'Per_TwoPlusRace',
+                  'stutch_q2', 'stutch_q3', 'stutch_q4',
+                  'suburb', 'town', 'rural', 'per_bach_plus', 'per_broadband',
+                  'MedianHouseholdIncome_10K']
 
 
 def prepX(df, housecontrols=housecontrols, variable_names=variable_names):
+    
+    # Convert Student-to-Teacher ratios to quartiles.
     stratiodum = pd.get_dummies(pd.qcut(df['sch_Elementary_stud_to_tch'], q=4))
     stratiodum.columns = ['stutch_q1', 'stutch_q2', 'stutch_q3', 'stutch_q4' ]
-    #Leaveone out
+    #Leave-one out
     stratiodum =stratiodum[['stutch_q2', 'stutch_q3', 'stutch_q4' ]]
-    
+
+    # Convert Total Population to quartiles.    
     popqrts =  pd.get_dummies(pd.qcut(df['TotalPop'], q=4))
     popqrts.columns = ['pop_q1', 'pop_q2', 'pop_q3', 'pop_q4' ]
     popqrts = popqrts[['pop_q2', 'pop_q3', 'pop_q4' ]]
     
-    
     df = pd.concat([df, stratiodum], axis=1)
     df = pd.concat([df, popqrts], axis=1)
 
+    # Generate Percent by Race/Ethnicity
     df['Per_Black'] = 100*df['Per_Black']    
     df['Per_Hispanic'] = 100*df['Per_Hispanic']    
-
     df['Per_AIAN'] = 100*df['Pop_AIAN']/df['TotalPop']
     df['Per_Asian'] = 100*df['Pop_Asian']/df['TotalPop']
     df['Per_NHPI'] = 100*df['Pop_NHPI']/df['TotalPop']
     df['Per_OtherRace'] = 100*df['Pop_OtherRace']/df['TotalPop']
     df['Per_TwoPlusRace'] = 100*df['Pop_TwoPlusRace']/df['TotalPop']
+    
+    # Bin the 12 categorical rural-urban commuting areas according to USDA
+    # categories.
     df['urban'] = df['RUCA1'].isin([1,2,3]).astype(int)
     df['suburb'] = df['RUCA1'].isin([4, 5, 6]).astype(int)
     df['town'] = df['RUCA1'].isin([7, 8, 9]).astype(int)
     df['rural'] = df['RUCA1'].isin([10]).astype(int)
+    
+    # Miscelanous conversion for interpretability
     df['per_bach_plus'] = 100*(df['Pop25_plus_with_bachelors'] + df['Pop25_plus_with_gradprof'])/df['Pop25_plus']
     df['per_broadband'] = 100*df['With_broadband']/df['total_occupied_housing_units']
     df['per_employed'] = 100*df['Pop_in_LaborForce']/ df['Pop_16plus']
     df['MedianHouseholdIncome_10K'] = df['MedianHouseholdIncome']/10000
-   
     
-    # Removed due to potential collinarity with urbanicity
-    
-    
-    # Bedrooms
+    # Percent of households by bedrooms
     # Base is one bedroom
     df['per_none_bed'] = df['units_none_bedroom']/ df['total_housing_units']
     df['per_2_bed'] = df['units_2_bedroom']/ df['total_housing_units']
@@ -105,7 +111,7 @@ def prepX(df, housecontrols=housecontrols, variable_names=variable_names):
     df['per_4_bed'] = df['units_4_bedroom']/ df['total_housing_units']
     df['per_5plus_bed'] = df['units_5plus_bedroom']/ df['total_housing_units']
     
-    # Age
+    # Percent of houses by year built
     # Base is 2014 or later
     df['per_built_2010_2013'] = df['yr_built_2010_2013']/ df['total_housing_units']
     df['per_built_2000_2009'] = df['yr_built_2000_2009']/ df['total_housing_units']
@@ -117,7 +123,7 @@ def prepX(df, housecontrols=housecontrols, variable_names=variable_names):
     df['per_built_1940_1949'] = df['yr_built_1940_1949']/ df['total_housing_units']
     df['per_built_1939earlier'] = df['yr_built_1939earlier']/ df['total_housing_units']
 
-    
+    # Subset
     analytic = df[['ZCTA5CE10'] + variable_names + housecontrols].copy()
     analytic = analytic.dropna()
     return analytic
@@ -125,12 +131,20 @@ def prepX(df, housecontrols=housecontrols, variable_names=variable_names):
 feat2019 = prepX(df=feat)
 adf = pd.merge(zdf, feat2019,  on ='ZCTA5CE10')
 
-
 #############################
 # Calaculte Coeffieencts
 
-
 def calccoefs():
+    '''
+    This funciton runs a spatial lag regression using the variable names and 
+    house controls defined at the top of the file.The function loops over all 
+    months defined in the ys list defined above, these ys are the months in
+    the Zillow data.
+    
+    There is the option to run OLS models to confirm the spatial
+    autocorrelation of OLS residuals. The results of a single call store the
+    coefficients and return them.
+    '''
     ols = []
     coefdf = pd.DataFrame()    
     vardf = pd.DataFrame(['Constant'] + variable_names + housecontrols + ['W'] )
@@ -209,9 +223,11 @@ def calccoefs():
     return coefdf, ols
 
 #################################################
-# Build Coefficient Dataframe    
+# Build Coefficient Dataframe
+    
 coefdf, ols_all = calccoefs()
- 
+
+# Regressions had a log transformed y, exponentiate.  
 tran_names = []
 for v in variable_names:
     coefdf['trans_'+v] = 100*(np.exp(coefdf[v]) - 1)
@@ -250,6 +266,6 @@ ax.legend(frameon=False,  fontsize=24)
 ax.tick_params(axis='both', which='major', labelsize=24)
 ax.tick_params(axis='both', which='minor', labelsize=24)
   
-savepath = r'..\..\LogsOutput\CoefPlots\Report_Urbaniciyt.svg'
+savepath = r'..\..\LogsOutput\CoefPlots\Report_Urbanicity.svg'
 plt.savefig(savepath)
 plt.close()
